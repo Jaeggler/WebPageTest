@@ -1,21 +1,38 @@
 * {
-font-size: 18px;
+  border: 1px solid gray;
+  box-sizing: border-box;
 }
 
-p{
-  color: rgb(200,0,0);
+div.container{
+  width: 100%;
+  border: 1px solid gray;
+}
+header{
+  text-align: center;
+}
+.aboutme {
+  float: left;
+  max-width: 160px;
+  margin: 0;
+  padding: 1em;
+}
+.tareas{
+  margin-left: 160px;
+  border-left: 1px solid gray;
+  padding: 1em;
+  overflow: hidden;
+  text-align: center;
 }
 
-img.logo {
-  width: 20%;
-  height: 10%;
+ul {
+  padding: 0;
 }
 
-img.aboutme {
-  width: 15%;
-  height: 15%;
-}
-
-img {
-
+li {
+  display: inline-block;
+  width: 200px;
+  height:200px;
+   margin: 16px 20px;
+   background-image: url("Imagenes/GnomePNG.png");
+   background-size: cover;
 }
