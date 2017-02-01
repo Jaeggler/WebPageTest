@@ -1,38 +1,136 @@
 * {
-  border: 1px solid gray;
   box-sizing: border-box;
 }
+a{
+  color: white;
+  text-decoration: none;
+}
 
+a:hover{
+  color: gray;
+}
 div.container{
-  width: 100%;
-  border: 1px solid gray;
+  background-image: url("Imagenes/gearpattern.jpg");
 }
 header{
+  width: 100%;
+  background-color: rgba(255,255,255,0.95);
+  border: 1px solid gray;
   text-align: center;
 }
-.aboutme {
-  float: left;
-  max-width: 160px;
-  margin: 0;
-  padding: 1em;
+
+div.navigation{
+  background-color: rgb(36,36,36);
+  height: 50px;
+  text-align: center;
+  color: white;
 }
+.navigation ul{
+margin: 0;
+}
+.navigation li{
+  width: 100px;
+  display: inline-block;
+  margin: 0px 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 15px 0px;
+}
+
+#headlogo{
+  width: 1000px;
+  height: 200px;
+  margin: 20px 20px;
+}
+
+#semana1{
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  height:300px;
+  margin: 16px 20px;
+  background-image: url("Imagenes/webcode.png");
+  background-size: cover;
+  border: 5px solid rgb(36,36,36);
+  border-radius: 6px;;
+}
+
 .tareas{
-  margin-left: 160px;
-  border-left: 1px solid gray;
+  margin-left: 200px;
+  margin-right: 200px;
   padding: 1em;
   overflow: hidden;
   text-align: center;
+  background-color: rgba(255,255,255,0.95);
 }
 
 ul {
   padding: 0;
 }
 
-li {
+.tarea {
+  text-align: center;
   display: inline-block;
-  width: 200px;
-  height:200px;
-   margin: 16px 20px;
-   background-image: url("Imagenes/GnomePNG.png");
-   background-size: cover;
+  width: 300px;
+  height:300px;
+  margin: 16px 20px;
+  background-image: url("Imagenes/GnomeWorkPNG.png");
+  background-size: cover;
+  border: 5px solid rgb(36,36,36);
+  border-radius: 6px;
+}
+
+.tarea h3,#semana1 h3{
+  background-color: rgb(36,36,36);
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  padding: 40px 0px;
+  margin: 195px 0px;
+}
+
+footer{
+  background-color: rgb(36,36,36);
+  height: 35px;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+}
+
+footer h4{
+  width: 100%;
+  font-size: 15px;
+  margin: 0;
+}
+
+#mifoto{
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+}
+
+#aboutme{
+  width: 500px;
+  margin: auto;
+}
+.tareas h4 {
+text-align: justify;
+  width: 500px;
+}
+
+#disenoweb {
+  margin: 0;
+  width: 50%;
+  float: right;
+}
+#disenoweb h2{
+  text-align: justify;
+  font-size: 20px;
+  margin: 0;
+}
+
+#disenoweb h3{
+  text-align: justify;
+  font-size: 15px;
+  margin: 0;
 }
