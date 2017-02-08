@@ -1,17 +1,15 @@
+/*General*/
 * {
   box-sizing: border-box;
-}
-a{
-  color: white;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
-a:hover{
-  color: gray;
-}
-div.container{
+.container{
   background-image: url("Imagenes/gearpattern.jpg");
 }
+
+/*Header Cluster*/
 header{
   width: 100%;
   background-color: rgba(255,255,255,0.95);
@@ -19,15 +17,24 @@ header{
   text-align: center;
 }
 
-div.navigation{
+#headlogo{
+  width: 1000px;
+  height: 200px;
+  margin-top: 1em;
+}
+
+/*Navigation Cluster*/
+.navigation{
   background-color: rgb(36,36,36);
   height: 50px;
   text-align: center;
   color: white;
 }
+
 .navigation ul{
-margin: 0;
+  margin: 0;
 }
+
 .navigation li{
   width: 100px;
   display: inline-block;
@@ -37,58 +44,135 @@ margin: 0;
   padding: 15px 0px;
 }
 
-#headlogo{
-  width: 1000px;
-  height: 200px;
-  margin: 20px 20px;
+.navigation a{
+  color: white;
+  text-decoration: none;
 }
 
-#semana1{
-  text-align: center;
-  display: inline-block;
-  width: 300px;
-  height:300px;
-  margin: 16px 20px;
-  background-image: url("Imagenes/webcode.png");
-  background-size: cover;
-  border: 5px solid rgb(36,36,36);
-  border-radius: 6px;;
+.navigation a:hover{
+  color: gray;
 }
 
-.tareas{
+/*Contenido Cluster*/
+
+.contenido a{
+  color: white;
+  text-decoration: none;
+}
+
+.contenido a:hover{
+  color: gray;
+}
+
+.contenido{
+  min-height: 750px;
   margin-left: 200px;
   margin-right: 200px;
-  padding: 1em;
   overflow: hidden;
   text-align: center;
   background-color: rgba(255,255,255,0.95);
 }
 
-ul {
-  padding: 0;
+#contenidoabout {
+  padding: 0em 3em;
 }
 
+#contenidoassignment {
+  padding: 0em 3em;
+}
+
+.contenido table{
+  border: 1px solid gray;
+  height: 750px;
+  width: 100%;
+}
+
+.contenido td{
+  border: 1px solid gray;
+  width: 50%;
+  text-align: center;
+
+}
+
+.contenido h1{
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.contenido h2{
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.contenido h3{
+  text-align: justify;
+  margin-top: 1em;
+}
+
+
+/*Index Page*/
 .tarea {
   text-align: center;
   display: inline-block;
   width: 300px;
-  height:300px;
-  margin: 16px 20px;
+  height: 300px;
+  margin: 5px 5px;
   background-image: url("Imagenes/GnomeWorkPNG.png");
   background-size: cover;
   border: 5px solid rgb(36,36,36);
   border-radius: 6px;
 }
 
-.tarea h3,#semana1 h3{
+.tarea h3{
   background-color: rgb(36,36,36);
+  text-align: center;
   color: white;
   font-size: 18px;
+  line-height: 20px;
   width: 100%;
-  padding: 40px 0px;
-  margin: 195px 0px;
+  padding: 35px 0px;
+  margin: 200px 0px;
 }
 
+#semana1{
+  background-image: url("Imagenes/webcode.png");
+}
+
+#semana2{
+  background-image: url("Imagenes/CADweek2.png");
+}
+
+.sidebar{
+  border: 1px solid rgb(0, 0, 0);
+  float: left;
+  width: 180px;
+  margin-top: 3em;
+  margin-left: 10px;
+  background-color: rgba(255,255,255,0.95);
+  position: fixed;
+}
+
+.sidebar h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+#fotoindex{
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin: 2em 1.75em;
+}
+
+/*About and Assignment Page*/
+#fotoabout{
+  border: 1px solid gray;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+}
+
+/*Footer Cluster*/
 footer{
   background-color: rgb(36,36,36);
   height: 35px;
@@ -99,38 +183,6 @@ footer{
 
 footer h4{
   width: 100%;
-  font-size: 15px;
-  margin: 0;
-}
-
-#mifoto{
-  width: 320px;
-  height: 320px;
-  border-radius: 100%;
-}
-
-#aboutme{
-  width: 500px;
-  margin: auto;
-}
-.tareas h4 {
-text-align: justify;
-  width: 500px;
-}
-
-#disenoweb {
-  margin: 0;
-  width: 50%;
-  float: right;
-}
-#disenoweb h2{
-  text-align: justify;
-  font-size: 20px;
-  margin: 0;
-}
-
-#disenoweb h3{
-  text-align: justify;
   font-size: 15px;
   margin: 0;
 }
