@@ -56,11 +56,20 @@ header{
 /*Contenido Cluster*/
 
 .contenido a{
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 .contenido a:hover{
+  color: gray;
+}
+
+#contenidoindex a{
+  color: white;
+  text-decoration: none;
+}
+
+#contenidoindex a:hover{
   color: gray;
 }
 
@@ -89,7 +98,6 @@ header{
 .contenido td{
     width: 50%;
   text-align: center;
-
 }
 
 .contenido h1{
@@ -138,6 +146,10 @@ header{
 
 #semana2{
   background-image: url("Imagenes/CADweek2.png");
+}
+
+#semana3{
+  background-image: url("Imagenes/lasercut.jpg");
 }
 
 .sidebar{
