@@ -152,6 +152,18 @@ header{
   background-image: url("Imagenes/lasercut.jpg");
 }
 
+#semana4{
+  background-image: url("Imagenes/week4logo.jpg");
+}
+
+#semana5{
+  background-image: url("Imagenes/week5logo.jpg");
+}
+
+#finalp{
+  background-image: url("Imagenes/finalplogo.jpg");
+}
+
 .sidebar{
     float: left;
   width: 180px;
