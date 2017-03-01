@@ -113,6 +113,8 @@ header{
 .contenido h3{
   text-align: justify;
   margin-top: 1em;
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 
