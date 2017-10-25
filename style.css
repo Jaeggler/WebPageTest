@@ -36,7 +36,7 @@ header{
 }
 
 .navigation li{
-  width: 100px;
+  width: 200px;
   display: inline-block;
   margin: 0px 50px;
   text-transform: uppercase;
@@ -143,47 +143,67 @@ header{
 }
 
 #semana1{
-  background-image: url("Imagenes/webcode.png");
+  background-image: url("Imagenes/logos/w1_logo.png");
 }
 
 #semana2{
-  background-image: url("Imagenes/CADweek2.png");
+  background-image: url("Imagenes/logos/w2_logo.png");
 }
 
 #semana3{
-  background-image: url("Imagenes/lasercut.jpg");
+  background-image: url("Imagenes/logos/w3_logo.jpg");
 }
 
 #semana4{
-  background-image: url("Imagenes/week4logo.jpg");
+  background-image: url("Imagenes/logos/w4_logo.jpg");
 }
 
 #semana5{
-  background-image: url("Imagenes/week5logo.jpg");
+  background-image: url("Imagenes/logos/w5_logo.jpg");
 }
 
 #semana6{
-  background-image: url("Imagenes/week6logo.jpg");
+  background-image: url("Imagenes/logos/w6_logo.jpg");
 }
 
 #semana7{
-  background-image: url("Imagenes/week7logo.jpg");
+  background-image: url("Imagenes/logos/w7_logo.jpg");
+}
+
+#semana8{
+  background-image: url("Imagenes/logos/w8_logo.jpg");
 }
 
 #semana9{
-  background-image: url("Imagenes/week9logo.jpg");
+  background-image: url("Imagenes/logos/w9_logo.jpg");
+}
+
+#semana10{
+  background-image: url("Imagenes/logos/w10_logo.jpg");
+}
+
+#semana11{
+  background-image: url("Imagenes/logos/w11_logo.jpg");
+}
+
+#semana12{
+  background-image: url("Imagenes/logos/w12_logo.jpg");
 }
 
 #semana13{
-  background-image: url("Imagenes/week13logo.jpg");
+  background-image: url("Imagenes/logos/w13_logo.jpg");
 }
 
 #semana14{
-  background-image: url("Imagenes/week14logo.jpg");
+  background-image: url("Imagenes/logos/w14_logo.jpg");
 }
 
-#finalp{
-  background-image: url("Imagenes/finalplogo.jpg");
+#semana15{
+  background-image: url("Imagenes/logos/w15_logo.jpg");
+}
+
+#semana16{
+  background-image: url("Imagenes/logos/w16_logo.jpg");
 }
 
 .sidebar{
