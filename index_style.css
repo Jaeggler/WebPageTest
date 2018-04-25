@@ -1,0 +1,109 @@
+
+/*Index Page*/
+/*.tarea {
+  height: 300px;
+  background-image: url("Imagenes/GnomeWorkPNG.png");
+  background-size: cover;
+  border: 5px solid rgb(36,36,36);
+  border-radius: 6px;
+}*/
+
+#semana1{
+  background-image: url("Imagenes/logos/w1_logo.png");
+}
+
+#semana2{
+  background-image: url("Imagenes/logos/w2_logo.png");
+}
+
+#semana3{
+  background-image: url("Imagenes/logos/w3_logo.jpg");
+}
+
+#semana4{
+  background-image: url("Imagenes/logos/w4_logo.jpg");
+}
+
+#semana5{
+  background-image: url("Imagenes/logos/w5_logo.jpg");
+}
+
+#semana6{
+  background-image: url("Imagenes/logos/w6_logo.jpg");
+}
+
+#semana7{
+  background-image: url("Imagenes/logos/w7_logo.jpg");
+}
+
+#semana8{
+  background-image: url("Imagenes/logos/w8_logo.jpg");
+}
+
+#semana9{
+  background-image: url("Imagenes/logos/w9_logo.jpg");
+}
+
+#semana10{
+  background-image: url("Imagenes/logos/w10_logo.jpg");
+}
+
+#semana11{
+  background-image: url("Imagenes/logos/w11_logo.jpg");
+}
+
+#semana12{
+  background-image: url("Imagenes/logos/w12_logo.jpg");
+}
+
+#semana13{
+  background-image: url("Imagenes/logos/w13_logo.jpg");
+}
+
+#semana14{
+  background-image: url("Imagenes/logos/w14_logo.jpg");
+}
+
+#semana15{
+  background-image: url("Imagenes/logos/w15_logo.jpg");
+}
+
+#semana16{
+  background-image: url("Imagenes/logos/w16_logo.jpg");
+}
+
+.sidebar{
+  display: none;
+}
+
+#fotoindex{
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin: 2em 1.75em;
+}
+
+/*About and Assignment Page*/
+#fotoabout{
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+}
+
+@media (min-width: 700px) {
+  .sidebar{
+    display: block;
+    float: left;
+    width: 180px;
+    margin-top: 3em;
+    margin-left: 10px;
+    background-color: rgba(255,255,255,0.95);
+    position: fixed;
+  }
+
+  .sidebar h1{
+    font-size: 20px;
+    text-align: center;
+  }
+
+}

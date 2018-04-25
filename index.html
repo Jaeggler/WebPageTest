@@ -1,32 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--declarar el tipo de documento = HTML 5 -->
 <html>
+
+<!--HEAD-->
 <head>
-    <title>Diego Santa Cruz Meono</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+  <title>Diego Santa Cruz Meono</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-display.css" type="text/css" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href="index_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<!--BODY-->
 <body>
-  <div class="container">
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
 
-  <div class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="finalp.html">Final Proyect!</a></li>
-    </ul>
-  </div>
+  <div class="grid-container">
 
-<!-- sidebar -->
-  <div class="sidebar">
-    <img id="fotoindex" src="Imagenes/FotoDiego.png">
-    <h1>Diego Santa Cruz</h1>
-  </div>
+    <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
+    </div>
 
-<!-- Cuerpo en si -->
-  <div class="contenido" id="contenidoindex">
+    <div class="container-navigation">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="about.html"><li>About</li></a>
+        <a href="finalp.html"><li>Final Project!</li></a>
+      </ul>
+    </div>
+
+    <div class="container-left">
+      <!-- sidebar -->
+        <div class="sidebar">
+          <img id="fotoindex" src="Imagenes/FotoDiego.png">
+          <h1>Diego Santa Cruz</h1>
+        </div>
+
+    </div>
+
+    <div class="container-main">
 
       <div class="tarea" id="semana1">
       <h3><a href="week1.html">Web Design</a></h3>
@@ -91,12 +104,17 @@
       <div class="tarea" id="semana16">
       <h3><a href="week16.html">Intellectual property</a></h3>
       </div>
-
     </div>
 
-    <footer>
+    <div class="container-right">
+    </div>
+
+    <div class="container-footer">
       <h4>Made by Diego Santa Cruz Meono</h4>
       <h4>FabAcademy2017</h4>
-    </footer>
+    </div>
+
+  </div>
+
 </body>
 </html>
