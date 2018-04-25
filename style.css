@@ -6,15 +6,13 @@
 /*Header Cluster*/
 .container-header{
   background-color: rgba(255,255,255,0.95);
-  text-align: center;
-  border: 1px solid gray;
 }
 
 #headlogo{
   display: block;
   width: 210px;
   height: 41px;
-  margin: auto;
+  margin: 7px auto;
 }
 
 /*Navigation Cluster*/
@@ -22,7 +20,6 @@
   background-color: rgba(26,45,79,0.95);
   text-align: center;
   color: white;
-  border: 1px solid grey;
 }
 
 .container-navigation ul{
@@ -45,18 +42,6 @@
 .container-navigation li:hover{
   background-color: rgba(22,25,35,0.95);
 }
-
-/*contenido WEEK TITLE Cluster*/
-/*.weektitle {
-background-color: rgba(8, 137, 77, 0.95);
-width: 1500px;
-margin: 2px 202px 2px 202px;
-text-align: center;
-}
-
-.weektitle h1{
-color: white;
-}*/
 
 /*Left Cluster*/
 .container-left {
@@ -124,13 +109,14 @@ color: white;
 .container-footer{
   background-color: rgba(26,45,79,0.95);
   text-align: center;
+  color: white;
 }
 
 .container-footer h4{
-  font-size: 15px;
+  font-size: 12px;
 }
 
-@media (min-width: 700px){
+@media (min-width: 768px){
 
 /*Main Cluster*/
 .container-main {
@@ -138,5 +124,12 @@ color: white;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid grey;
   text-align: center;
+  }
+
+  #headlogo{
+    display: block;
+    width: 420px;
+    height: 82px;
+    margin: 13px auto;
   }
 }
