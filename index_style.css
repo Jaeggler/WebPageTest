@@ -6,6 +6,7 @@
   background-color: white;
   border-radius: 6px;
   text-align: center;
+  background-size: cover;
 }
 
 .tarea a {
@@ -29,6 +30,7 @@
 
   #semana1{
     background-image: url("Imagenes/logos/w1_logo.png");
+    align-self: flex-end;
   }
 
   #semana2{
@@ -97,17 +99,18 @@
   line-height: 50px;
   border: 1px solid rgb(36,36,36);
   border-radius: 6px;
-  text-align: center;
+  text-align: right;
+
 }
 
 .tarea a {
-  color: blue;
+  color: white;
   text-decoration: none;
 }
 
 .tarea h3{
-  vertical-align: middle;
-}
+  background-color: black;
+  }
 
 /*GRID CONTAINER - LAPTOP M*/
 @media (min-width: 1024px) {

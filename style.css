@@ -118,14 +118,6 @@
 
 @media (min-width: 768px){
 
-/*Main Cluster*/
-.container-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 1px solid grey;
-  text-align: center;
-  }
-
   #headlogo{
     display: block;
     width: 420px;
