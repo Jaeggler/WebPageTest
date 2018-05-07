@@ -32,13 +32,13 @@ body {
 .grid-container {
 display: grid;
 grid-template-areas:
-"header"
-"nav"
-"main"
-"footer";
+"header header"
+"nav nav"
+"left main"
+"footer footer";
 
 grid-template-columns:
-100%;
+150px 1fr;
 
 grid-template-rows:
 100px
@@ -47,15 +47,8 @@ grid-template-rows:
 30px;
 
 min-height: 100vh;
-}
-
-/*Main Cluster*/
-.container-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  text-align: center;
   }
+
 }
 
 /*GRID CONTAINER - IPAD LANDSCAPE - LAPTOP M*/
@@ -63,43 +56,59 @@ min-height: 100vh;
 .grid-container {
   display: grid;
 	grid-template-areas:
-   "header header header"
-   "nav nav nav"
-   "left main right"
-   "footer footer footer";
+   "header header"
+   "nav nav"
+   "left main"
+   "footer footer";
 
 	grid-template-columns:
-  150px 1fr 150px;
+  200px 1fr;
 
 	grid-template-rows:
-  100px
-  20px
+  200px
+  30px
   1fr
   30px;
 
 	min-height: 100vh;
   }
+
+  /*Main Cluster*/
+  .container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 206px 206px 206px 206px;
+    text-align: center;
+    }
 }
 
-/*GRID CONTAINER - LAPTOP L*/
+/*GRID CONTAINER - IPAD LANDSCAPE - LAPTOP M*/
 @media (min-width: 1440px) {
 .grid-container {
   display: grid;
 	grid-template-areas:
-   "header header header"
-   "nav nav nav"
-   "left main right"
-   "footer footer footer";
+   "header header"
+   "nav nav"
+   "left main"
+   "footer footer";
 
 	grid-template-columns:
-  150px 1fr 150px;
+  300px 1fr;
 
 	grid-template-rows:
-  100px
-  20px
+  200px
+  30px
   1fr
   30px;
 
 	min-height: 100vh;
   }
+
+  /*Main Cluster*/
+  .container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 285px 285px 285px 285px;
+    text-align: center;
+    }
 }

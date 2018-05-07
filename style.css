@@ -124,4 +124,50 @@
     height: 82px;
     margin: 13px auto;
   }
+
+  .container-navigation li{
+    margin: 0px 30px;
+  }
+
+}
+
+
+@media (min-width: 1024px){
+
+  #headlogo{
+    display: block;
+    width: 840px;
+    height: 164px;
+    margin: 18px auto;
+  }
+
+  .container-navigation ul{
+    line-height: 30px;
+    width: 100%;
+  }
+
+  .container-navigation li{
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 60px;
+    font-size: 20px;
+  }
+
+}
+
+@media (min-width: 1440px){
+
+
+  .container-navigation ul{
+    line-height: 30px;
+    width: 100%;
+  }
+
+  .container-navigation li{
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 90px;
+    font-size: 20px;
+  }
+
 }
