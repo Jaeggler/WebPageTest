@@ -1,87 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Networking</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+
+<!--GENERAL HEAD CLUSTER-->
+<head>
+  <title>W14-Machine Design</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-week.css" type="text/css" rel="stylesheet">
+  <link href="general_style.css" type="text/css" rel="stylesheet">
+  <link href="week_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<!--GENERAL BODY CLUSTER-->
 <body>
-  <div class="container">
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
-  <div class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pfinal.html">Final Project!</a></li>
-    </ul>
+<div class="grid-container">
+
+  <!--Header-->
+  <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
   </div>
-  <div class="contenido" id="contenidoassignment">
 
-    <table>
-      <!--Workflow-->
-      <tr>
-        <img src="Imagenes\week14\w14_workflow.jpg" width="727px" height="130px">
+  <!--Navegation-->
+  <div class="container-navigation">
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="finalp.html"><li>Final Project!</li></a>
+    </ul>
+    </div>
+
+  <!--Sidebar - Objetivos-->
+  <div class="container-side">
+    <div class="sidebar">
+
+    <div class="objectives">
+      <table>
+        <tr>
+          <th>
+              <h1>OBJECTIVES</h1>
+          </th>
         </tr>
-      <!--Fila1-->
-      <tr>
-        <td>
-          </td>
-        <td>
-          <h2>Networking</h2>
-            <h3>This week assignment focus on make to boards to connect, basically, one board sending a data package to another making the second one to respond.</h3>
-            <h3>I will be using a Fabduino board and a second board to make a serial comm between them.</h3>
-            <h3>Having the spark fun guide "Serial Communication" (link) I will connect my Fabduino to a Arduino board, and then to another milled board.</h3>
-            <h3></h3>
-            <h3>Try 1</h3>
-            <h3>Using the Fabduino, I made a simple programm (one for the Fabduino and one for the Arduino)and connected both boards. </h3>
-            <h3>When the Fabduino sends data, the arduino blinks</h3>
+        <tr>
+          <td>
+          <ul>
+            <li>Group - Design a machine (mechanism + actuation + automation), including the end effector, build the passive parts and operate it manually.</li>
+            <li>Personal - Plan and make a machine. Document the group project and your individual contribution.</li>
+          </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
 
-            </td>
+    <div class="tools">
+      <table>
+        <tr>
+          <th>
+              <h1>ASSIGNMENT TOOLS</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
 
-      </tr>
+    <div class="workflow">
+      <table>
+        <tr>
+          <th>
+              <h1>WORKFLOW</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Design machine</li>
+              <li>Design control</li>
+              <li>Building</li>
+              <li>Test!</li>
+            </ol>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+  <!--Main-->
+  <div class="container-main">
+    <table>
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Building a board</h2>
-              <h3></h3>
-              <h3></h3>
-              <h3></h3>
-              <h3></h3>
-        </td>
-        <td>
-          </td>
-
-      </tr>
-      <!--Fila3-->
-      <tr>
-        <td></td>
-        <td>
-          <h2>Testing</h2>
-            <h3></h3>
-
+          <h2>Jump to!</h2>
+            <h3>This week our group assignment is in http://archive.fabacademy.org/archives/2017/fablabtecsup/students/446/MechanicalDesignGroupAssignment.html </h3>
             </td>
-
-      </tr>
-      <!--Fila4-->
-
-      <tr>
-        <td>
-            <h2></h2>
-              <h3></h3>
-              <h3></h3>
-              <h3></h3>
-        </td>
-        <td>
-          </td>
-
       </tr>
     </table>
-       </div>
   </div>
-    <footer>
-      <h4>Made by Diego Santa Cruz Meono</h4>
-      <h4>FabAcademy2017</h4>
-    </footer>
+
+  <!--Footer-->
+  <div class="container-footer">
+    <h4>Made by Diego Santa Cruz Meono</h4>
+    <h4>FabAcademy2018</h4>
+  </div>
+</div>
 </body>
 </html>

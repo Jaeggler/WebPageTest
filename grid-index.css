@@ -6,8 +6,7 @@ body {
 /*GRID AREAS*/
 .container-header {grid-area: header}
 .container-navigation {grid-area: nav}
-.container-left {grid-area: left}
-.container-right {grid-area: right}
+.container-side {grid-area: side}
 .container-main {grid-area: main}
 .container-footer {grid-area: footer}
 
@@ -34,7 +33,7 @@ display: grid;
 grid-template-areas:
 "header header"
 "nav nav"
-"left main"
+"side main"
 "footer footer";
 
 grid-template-columns:
@@ -58,7 +57,7 @@ min-height: 100vh;
 	grid-template-areas:
    "header header"
    "nav nav"
-   "left main"
+   "side main"
    "footer footer";
 
 	grid-template-columns:
@@ -89,7 +88,7 @@ min-height: 100vh;
 	grid-template-areas:
    "header header"
    "nav nav"
-   "left main"
+   "side main"
    "footer footer";
 
 	grid-template-columns:

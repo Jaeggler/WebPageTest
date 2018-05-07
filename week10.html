@@ -1,82 +1,146 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Output Device</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+
+<!--GENERAL HEAD CLUSTER-->
+<head>
+  <title>W10-Input Devices</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-week.css" type="text/css" rel="stylesheet">
+  <link href="general_style.css" type="text/css" rel="stylesheet">
+  <link href="week_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<!--GENERAL BODY CLUSTER-->
 <body>
-  <div class="container">
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
-  <div class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pfinal.html">Final Project!</a></li>
-    </ul>
+<div class="grid-container">
+
+  <!--Header-->
+  <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
   </div>
-  <div class="contenido" id="contenidoassignment">
 
-    <table>
-      <!--Workflow-->
-      <tr>
-        <img src="Imagenes\week10\w10_workflow.jpg" width="727px" height="130px">
+  <!--Navegation-->
+  <div class="container-navigation">
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="finalp.html"><li>Final Project!</li></a>
+    </ul>
+    </div>
+
+  <!--Sidebar - Objetivos-->
+  <div class="container-side">
+    <div class="sidebar">
+
+    <div class="objectives">
+      <table>
+        <tr>
+          <th>
+              <h1>OBJECTIVES</h1>
+          </th>
         </tr>
-      <!--Fila1-->
-      <tr>
-        <td>
-          </td>
-        <td>
-          <h2>Output device</h2>
-            <h3>Im focusing this week to make part of my final project (You can check my project with the "Final Project!" tab). Will be desingning a board to make the stepper motors to work.</h3>
-            <h3>By the time this is being written, I not sure if my project "hand" will need 5 o 4 stepper motors, so I will be designing the board to withstand 5 if ever needed.</h3>
-            <h3>I will not be produce an integrated board. I already have a Fabduino, so adding a stepper motor board is a better choice.</h3>
-            </td>
+        <tr>
+          <td>
+          <ul>
+            <li>Group - measure the analog levels and digital signals in an input device.</li>
+            <li>Personal - Measure something: add a sensor to a microcontroller board that you have designed and read it.</li>
+          </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
 
-      </tr>
+    <div class="tools">
+      <table>
+        <tr>
+          <th>
+              <h1>ASSIGNMENT TOOLS</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Autodesk Eagle - Design Software</li>
+              <li>Roland Mill - Machine</li>
+              <li>Solder - Tool</li>
+            </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="workflow">
+      <table>
+        <tr>
+          <th>
+              <h1>WORKFLOW</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Add an input device to a board</li>
+              <li>Design board</li>
+              <li>Milling and soldering</li>
+              <li>Programming</li>
+            </ol>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+  <!--Main-->
+  <div class="container-main">
+    <table>
+      <!--Fila1-->
+
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Board Desing</h2>
-              <h3>First, I will desing the board using Eagle. </h3>
-              <h3>Comments</h3>
-              <h3>Have some issues with tabs that where half thickness. The software could not process naturally and a sub routine have to be added manually to avoid problems.</h3>
-              <h3>As said before, I remove the slot's relief ears to be added in this part, but we forgot to do that.</h3>
-        </td>
-        <td>
           </td>
-
+          <td>
+            <h2>Output device</h2>
+              <h3>Im focusing this week to make part of my final project (You can check my project with the "Final Project!" tab). Will be desingning a board to make the stepper motors to work.</h3>
+              <h3>By the time this is being written, I not sure if my project "hand" will need 5 o 4 stepper motors, so I will be designing the board to withstand 5 if ever needed.</h3>
+              <h3>I will not be produce an integrated board. I already have a Fabduino, so adding a stepper motor board is a better choice.</h3>
+              </td>
       </tr>
       <!--Fila3-->
       <tr>
+        <td>
+          <td>
+              <h2>Board Desing</h2>
+                <h3>First, I will desing the board using Eagle. </h3>
+                <h3>Comments</h3>
+                <h3>Have some issues with tabs that where half thickness. The software could not process naturally and a sub routine have to be added manually to avoid problems.</h3>
+                <h3>As said before, I remove the slot's relief ears to be added in this part, but we forgot to do that.</h3>
+          </td>
+        </td>
+      </tr>
+      <!--Fila4-->
+      <tr>
         <td></td>
         <td>
-          <h2>Milling and soldering</h2>
+          <h2></h2>
             <h3></h3>
 
             </td>
 
       </tr>
-      <!--Fila4-->
-
-      <tr>
-        <td>
-            <h2>Programm</h2>
-              <h3></h3>
-              <h3></h3>
-              <h3></h3>
-        </td>
-        <td>
-          </td>
-
-      </tr>
-    </table>
-       </div>
+          </table>
   </div>
-    <footer>
-      <h4>Made by Diego Santa Cruz Meono</h4>
-      <h4>FabAcademy2017</h4>
-    </footer>
+
+  <!--Footer-->
+  <div class="container-footer">
+    <h4>Made by Diego Santa Cruz Meono</h4>
+    <h4>FabAcademy2018</h4>
+  </div>
+</div>
 </body>
 </html>

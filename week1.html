@@ -3,115 +3,159 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-    <title>Web Design</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+  <title>W1-WebDesign</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-week.css" type="text/css" rel="stylesheet">
+  <link href="general_style.css" type="text/css" rel="stylesheet">
+  <link href="week_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <!--GENERAL BODY CLUSTER-->
 <body>
-  <div class="container testo123">
-    <!--HEADER CLUSTER-->
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
+<div class="grid-container">
 
-  <!--NAVIGATION CLUSTER-->
-  <div class="navigation">
+  <!--Header-->
+  <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
+  </div>
+
+  <!--Navegation-->
+  <div class="container-navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="finap.html">Final Proyect!</a></li>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="finalp.html"><li>Final Project!</li></a>
     </ul>
-  </div>
+    </div>
 
+  <!--Sidebar - Objetivos-->
+  <div class="container-side">
+    <div class="sidebar">
 
-  <!--HEADER-WEEK TITLE STRIPE-->
-  <div class="weektitle">
-      <h1>WEEK1: WEB DESIGN</h1>
-  </div>
-
-
-  <!--GENERAL CONTENIDO CLUSTER-->
-  <div class="contenido">
-
-  <table>
-      <!--Objetivos-->
-      <tr>
-        <th>
-          <h2>OBJECTIVES</h2>
+    <div class="objectives">
+      <table>
+        <tr>
+          <th>
+              <h1>OBJECTIVES</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
           <ul>
-            <li>Build a personal site, describing you, your weekly assignments and your final proyect</li>
-            <li>Upload it to the class archive. Work through a git tutorial</li>
+            <li>Build a personal site, describing you, your weekly assignments and your final project.</li>
+            <li>Upload it to the class archive. Work through a git tutorial.</li>
           </ul>
-        </th>
-
-        <th>
-          <h2>ASSIGNMENT TOOLS</h2>
-          <ul>
-            <li>Atom - Text Editor</li>
-            <li>GitKraken - Git Client</li>
-          </ul>
-        </th>
-
-      <!--<img src="Imagenes\week1\w1_objectives.jpg" width="504px" height="277px">-->
-      </tr>
-      <!--Fila1-->
-      <tr>
-        <td><img src="Imagenes\week1\CodeAcademy.PNG" width="600px" height="300px"></td>
-
-        <td>
-           <h2>Html code</h2>
-              <h3>For this assignment, the first thing that came to my head was to force my self to code
-                every part of the web page. That would give me total control over the site and updating would
-                be easier. With that in mind, I would be needing to learn html code.</h3>
-              <h3>I went then to CodeAcademy.com. I have been learning Javascrip in the past with great pleasure, so went
-                back to check their HTML courses. After several hours with in-web practice, I was ready to try with my own website.</h3>
-                    </td>
-      </tr>
-      <!--Fila2-->
-      <tr>
-        <td>
-          <h2>Editor selection</h2>
-            <h3>I have some experience with coding, so I was thinking in using my installed editor for web code.
-            It is TextWrangler, which is installed in my Macbookpro. It's a very simple editor but enought for simple task.
-             I tried for a while, but I wasn't getting confortable with it. That's when decided to look for something else.
-             My search lead me to Atom editor. It is a simple but powerfull program with a very autopilot UI. In a couple of hours,
-             I was working with no problems. I even installed a preview addon, that let me see my html display in real time. Very helpful.</h3>
-           </td>
-        <td><img src="Imagenes\week1\AtomEditor.png" width="642px" height="250px"></td>
-      </tr>
-      <!--Fila3-->
-      <tr>
-        <td><img src="Imagenes\week1\WebDevelop.PNG" width="483px" height="300px"></td>
-        <td>
-          <h2>Web Develop</h2>
-          <h3>The hardest part of the job was making everything works from ground. With no template for reference,
-            I could only look in internet for several websites and check their source code to learn the "good practice".
-            Even with CodeAcademy open, finding why my text doesn't get into position was very frustrating in the beginning.
-            It is after several tries that I could make the layout for the home page, but the nightmare wasn't over. Learning that
-            it is important to make a good template is what will save time in the future. Even now I think my web will need a lot
-            of more improvement. </h3>
-
-          </td>
-      </tr>
-      <!--Fila4-->
-      <tr>
-        <td>
-          <h2>Git time!</h2>
-          <h3>With my experience in game development, knowing how to deal with git was simple. Once you understand what happens when you
-            pull info and how to commit every change, you have learned (in my opinion) 70% to 80% of the git model.
-            One thing that I didn't know was how to deploy a website using git. Some people was telling me that should use git to connect
-            to the repository. Because I also use a Mac, I could not use that option, instead downloaded Git Kraken for the job. No problems at all.</h3>
         </td>
-        <td><img src="Imagenes\week1\GitKraken.PNG" width="543px" height="300px"></td>
-      </tr>
+        </tr>
+      </table>
+    </div>
 
+    <div class="tools">
+      <table>
+        <tr>
+          <th>
+              <h1>ASSIGNMENT TOOLS</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Atom - Text Editor</li>
+              <li>GitKraken - Git Client</li>
+            </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+  <div class="workflow">
+    <table>
+      <tr>
+        <th>
+            <h1>WORKFLOW</h1>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <ol>
+            <li>Learn about HTML</li>
+            <li>Select programming editor</li>
+            <li>Develop a web page from scratch (personal choice)</li>
+            <li>Upload using Git</li>
+          </ol>
+      </td>
+      </tr>
     </table>
-       </div>
   </div>
-    <footer>
-      <h4>Made by Diego Santa Cruz Meono</h4>
-      <h4>FabAcademy2017</h4>
-    </footer>
+  </div>
+  </div>
+
+  <!--Main-->
+  <div class="container-main">
+
+    <table>
+        <!--Fila1-->
+        <tr>
+          <td><img src="Imagenes\week1\CodeAcademy.PNG" width="600px" height="300px"></td>
+
+          <td>
+             <h2>Html code</h2>
+                <h3>For this assignment, the first thing that came to my head was to force my self to code
+                  every part of the web page. That would give me total control over the site and updating would
+                  be easier. With that in mind, I would be needing to learn html code.</h3>
+                <h3>I went then to CodeAcademy.com. I have been learning Javascrip in the past with great pleasure, so went
+                  back to check their HTML courses. After several hours with in-web practice, I was ready to try with my own website.</h3>
+                      </td>
+        </tr>
+        <!--Fila2-->
+        <tr>
+          <td>
+            <h2>Editor selection</h2>
+              <h3>I have some experience with coding, so I was thinking in using my installed editor for web code.
+              It is TextWrangler, which is installed in my Macbookpro. It's a very simple editor but enought for simple task.
+               I tried for a while, but I wasn't getting confortable with it. That's when decided to look for something else.
+               My search lead me to Atom editor. It is a simple but powerfull program with a very autopilot UI. In a couple of hours,
+               I was working with no problems. I even installed a preview addon, that let me see my html display in real time. Very helpful.</h3>
+             </td>
+          <td><img src="Imagenes\week1\AtomEditor.png" width="642px" height="250px"></td>
+        </tr>
+        <!--Fila3-->
+        <tr>
+          <td><img src="Imagenes\week1\WebDevelop.PNG" width="483px" height="300px"></td>
+          <td>
+            <h2>Web Develop</h2>
+            <h3>The hardest part of the job was making everything works from ground. With no template for reference,
+              I could only look in internet for several websites and check their source code to learn the "good practice".
+              Even with CodeAcademy open, finding why my text doesn't get into position was very frustrating in the beginning.
+              It is after several tries that I could make the layout for the home page, but the nightmare wasn't over. Learning that
+              it is important to make a good template is what will save time in the future. Even now I think my web will need a lot
+              of more improvement. </h3>
+
+            </td>
+        </tr>
+        <!--Fila4-->
+        <tr>
+          <td>
+            <h2>Git time!</h2>
+            <h3>With my experience in game development, knowing how to deal with git was simple. Once you understand what happens when you
+              pull info and how to commit every change, you have learned (in my opinion) 70% to 80% of the git model.
+              One thing that I didn't know was how to deploy a website using git. Some people was telling me that should use git to connect
+              to the repository. Because I also use a Mac, I could not use that option, instead downloaded Git Kraken for the job. No problems at all.</h3>
+          </td>
+          <td><img src="Imagenes\week1\GitKraken.PNG" width="543px" height="300px"></td>
+        </tr>
+
+      </table>
+  </div>
+
+  <!--Footer-->
+  <div class="container-footer">
+    <h4>Made by Diego Santa Cruz Meono</h4>
+    <h4>FabAcademy2018</h4>
+  </div>
+</div>
 </body>
 </html>

@@ -1,29 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Electronics Production</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+
+<!--GENERAL HEAD CLUSTER-->
+<head>
+  <title>W4-Electronics Production</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-week.css" type="text/css" rel="stylesheet">
+  <link href="general_style.css" type="text/css" rel="stylesheet">
+  <link href="week_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<!--GENERAL BODY CLUSTER-->
 <body>
-  <div class="container">
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
-  <div class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pfinal.html">Final Project!</a></li>
-    </ul>
+<div class="grid-container">
+
+  <!--Header-->
+  <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
   </div>
-  <div class="contenido" id="contenidoassignment">
 
+  <!--Navegation-->
+  <div class="container-navigation">
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="finalp.html"><li>Final Project!</li></a>
+    </ul>
+    </div>
+
+  <!--Sidebar - Objetivos-->
+  <div class="container-side">
+    <div class="sidebar">
+
+    <div class="objectives">
+      <table>
+        <tr>
+          <th>
+              <h1>OBJECTIVES</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+          <ul>
+            <li>Group - Characterize the specifications of your PCB production process.</li>
+            <li>Personal - Make an in-circuit programmer by milling the PCB, then optionally, trying other processes.</li>
+          </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="tools">
+      <table>
+        <tr>
+          <th>
+              <h1>ASSIGNMENT TOOLS</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Roland mill - Machine</li>
+              <li>Solder - Tool</li>
+              <li>AVR ISP - Electronics burner </li>
+            </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="workflow">
+      <table>
+        <tr>
+          <th>
+              <h1>WORKFLOW</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Programmer design</li>
+              <li>PCB milling</li>
+              <li>Soldering</li>
+              <li>Programming</li>
+              <li>Test!</li>
+            </ol>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+  <!--Main-->
+  <div class="container-main">
     <table>
-      <!--Workflow-->
-      <tr>
-        <img src="Imagenes\week4\w4_workflow.jpg" width="732px" height="132px">
 
-      </tr>
       <!--Fila1-->
       <tr>
         <td><img src="Imagenes\week4\w4_45traces.png" width="570px" height="200px"></td>
@@ -84,16 +160,18 @@
 
           <h3>Comments</h3>
           <h3>It took a while to the ISP to recognize it. I have to add some ducktape to the board in order to make it close-fit. After some tries I saw the light!</h3>
-</td>
+    </td>
         <td><img src="Imagenes\week4\w4_final.jpg" width="300px" height="300px"><img src="Imagenes\week4\w4_testing.jpg" width="300px" height="300px"></td>
       </tr>
 
     </table>
-       </div>
   </div>
-    <footer>
-      <h4>Made by Diego Santa Cruz Meono</h4>
-      <h4>FabAcademy2017</h4>
-    </footer>
+
+  <!--Footer-->
+  <div class="container-footer">
+    <h4>Made by Diego Santa Cruz Meono</h4>
+    <h4>FabAcademy2018</h4>
+  </div>
+</div>
 </body>
 </html>
