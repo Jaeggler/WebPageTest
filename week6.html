@@ -63,6 +63,7 @@
         <tr>
           <td>
             <ul>
+              <li>TinkerCAD - Simulation website</li>
               <li>Eagle - Design Software</li>
               <li>Roland mill - Machine</li>
             </ul>
@@ -81,9 +82,10 @@
         <tr>
           <td>
             <ol>
-              <li>Re-draw Echo-Hello World</li>
+              <li>Understand the circuit</li>
+              <li>Simulation</li>
               <li>Use electronics design software</li>
-              <li>Re draw</li>
+              <li>Re-draw Echo-Hello World</li>
               <li>Milling and soldering</li>
             </ol>
         </td>
@@ -100,17 +102,13 @@
       <!--Fila1-->
       <tr>
         <td>
-          <h2>Schematics Design</h2>
-            <h3>Trying a new software is always fun. For this weeks assingment we where working with Eagle, a very know program but new to Autodesk's roster. I worked with a 2016 FabAcademy, which <head>
-              a Eagle's Tutorial and the schematics for the Echo World</h3>
-            <h3>Comments</h3>
-            <h3>It was a very hard week. Usually I need to understand what I'm doing before actually do it. I could not figure out the board output, and adding (LED + button) something I don't understand
-            was something that grinds my gears. So I tried to simulate the board with Autodesk 123 Circuit but it couldn't be done. </h3>
-            <h3>Finally I found the guide, and everything was smooth.</h3>
+          <h2>Understanding the circuit</h2>
+            <h3>The "Hello World" circuit is based on a atTiny44 microcontroller which is programmed to print (echo) a given input in serial monitor. It have a 20MHz crystal,
+              FTDI and SPI terminals for serial comm and a 10K resistor and capacitor for micro safety. </h3>
+            <h3>We need to add a button to the circuit which will turn on/off a LED. This button will be on one of the free I/O pins of the micro and the LED will be on other of the free I/O. </h3>
 
             </td>
-        <td><img src="Imagenes\week6\add_resistor.jpg" width="350px" height="240px"><img src="Imagenes\week6\original_sch.png" width="350px" height="240px">
-            <img src="Imagenes\week6\ledbutton_sch.png" width="350px" height="240px">
+        <td><img src="Imagenes\week6\w6_echo_world.jpg" width="460px" height="435px">
       </tr>
       <!--Fila2-->
       <tr>
@@ -119,25 +117,25 @@
               <img src="Imagenes\week6\warning.png" width="350px" height="240px">
               </td>
         <td>
-            <h2>PCB Design</h2>
-              <h3>Eagle's PCB workflow is really simple. First, everything need to be placed like will be on the board (followed guide) and then connected. When you understand the workflow its really
-              simple to finish.</h3>
-              <h3>Comments</h3>
-              <h3>I had to rely heavily in the guide. With low electronics background I felt little confidence to try different routing.</h3>
+            <h2>Simulation</h2>
+              <h3>Using the TinkerCAD electronics simulator (TinkerCAD.com), I'm going to try to reproduce the circuit. Due this is a very basic -but free- simulator it doesn't have all components
+              , but do have all main components -name attiny45- which is all we need for this week. </h3>
+              <h3>From the side menu, grab all components to use: breadboard, attiny45 micro, resistor, capacitor, button and LED. This video shows how I connect them.</h3>
+              <h3>Finally I load the program to the micro and test results. It works!</h3>
+              <h3>What's different using atTiny45 from the original atTiny44? None. Should work the same way. The only difference for this proyect is pin availability. atTiny44 have 6 more pins (14)
+              than tiny45, but for this proyect its enough.</h3>
         </td>
       </tr>
       <!--Fila3-->
       <tr>
         <td>
-          <h2>Milling</h2>
-            <h3>After I finished with PCB design, I exported the PNG file for milling. This part was tricky because my first board was not the dimension I wanted, it was larger!
-              some reasearch after that, I found how to measure my board on Eagle and then resized the canvas/file. When I was sure dimensions were fine, only thing left to do was adding
-               a "W6" as text, refering to week 6 assignment.</h3>
-            <h3>Setting the Modela mill was easier this time. Loaded my file, set it´s origin and mill started and finish correctly.</h3>
-            <h3>Comments</h3>
-            <h3>Finding why my board png file had that dimensions took some time. I was thinking the program will keep origin's dimension but created based on pixel output (500 for this work).
-            Some test and finally got the right dimensions for my work</h3>
-            <h3>I was suggested to change some routes width, because the machine was not recognizing the space between some routes. A quick change and those routes were changed from 0.016" to 0.01" </h3>
+          <h2>Design Software - Using Eagle</h2>
+            <h3>For the PCB design, I will be using Eagle, from Autodesk. For how to install and setup Eagle, I used sparkfun guide: <a href="https://learn.sparkfun.com/tutorials/how-to-install-and-setup-eagle">How to install and setp Eagle</a>.
+            It's a very simple guide for programm installation, library setup (library I donwloaded from <a href="">here</a>) and other settings. </h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
+            <h3></h3>
             </td>
         <td><img src="Imagenes\week6\pcb_export.png" width="350px" height="240px"><img src="Imagenes\week6\export_window.png" width="350px" height="240px">
             <img src="Imagenes\week6\week6t3.png" width="350px" height="240px"><img src="Imagenes\week6\mill_final.jpg" width="350px" height="240px"></td>
