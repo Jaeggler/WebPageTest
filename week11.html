@@ -85,7 +85,7 @@
               <li>Add an output device</li>
               <li>Design board</li>
               <li>Milling and soldering</li>
-              <li>Programming</li>
+              <li>Testing</li>
             </ol>
         </td>
         </tr>
@@ -104,85 +104,79 @@
           </td>
           <td>
             <h2>Planning circuit</h2>
-              <h3>For this assignment I will make an attiny45-based board with a button, similar to the 'electronics design' assigment. This board will serve too for networking week, adding a 2x2 header and FTDI connector.
-              Also, will add two red LED to output a program in the board.</h3>
-              <h3>The code will make the board to turn one LED on a single push, and the another board to blink when button is hold.</h3>
-              <h3>Finally, the board will be connected to python application, which will display a different color depending on the input.</h3>
-              <h3></h3>
+              <h3>For this assignment I will use <a href="week10.html">week 10</a> board as a base. Will replace both LEDs and button with a RGB light. Will keep FTDI and 2x2 header for networking assignment.</h3>
               </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
           <h2>Simulation</h2>
-            <h3>The difference between this assignment and <a href="week6.html">week 6</a>is we are adding FTDI and 2x2 header, intended for serial comm. Also we are connecting an extra LED
-            to the free PIN.</h3>
+            <h3>Using <a href="week10.html">week 10</a> simulation as base, I replace both LEDs and button with a RGB light</h3>
             <h3>The bill of materials used here is: (without FTDI and 2x2 headers)</h3>
             <h3>
               <ul>
               <li>Attiny45 x1</li>
               <li>Red LED x1<li>
               <li>1uF Capacitor x1<li>
-              <li>10 kOhm Resistor x2</li>
-              <li>499 Ohm Resistor x2</li>
-              <li>Pushbutton x1</li>
+              <li>10k Ohm Resistor x1</li>
+              <li>1k Ohm Resistor x2</li>
+              <li>499 Ohm Resistor x1</li>
               <ul>
             </h3>
-            <h3>With everything connected, we load the code and its a success!.</h3>
-            <h3>Can find the simulation <a href="https://www.tinkercad.com/things/4WSk9Sx6aaV">here</a><h3>
+            <h3>With everything connected, I load a code found at <a href="">here</a> and its a success!.</h3>
+            <h3>Can find the simulation <a href="https://www.tinkercad.com/things/kt2DZlqMVVe">here</a><h3>
             </td>
         <td>
-          <img src="Imagenes\week10\w10_simulation.png" width="482px" height="232px">
+          <img src="Imagenes\week11\w11_simulation.png" width="556px" height="273px">
           </td>
       </tr>
       <!--Fila3-->
       <tr>
       <td>
-          <img src="Imagenes\week10\w10_schematic.png" width="734px" height="317px"><img src="Imagenes\week10\w10_board_v2.png" width="459px" height="363px">
+          <img src="Imagenes\week11\w11_schematics.png" width="608px" height="284px"><img src="Imagenes\week11\w11_board_result.png" width="582px" height="375px">
         </td>
       <td>
         <h2>Design</h2>
-          <h3>Create project, schematics and add all components to it. This time, I tried to make less "physical" connections but more labeled ones. Once all is connected, we start board design.</h3>
-          <h3>Similar to <a href="week6.html">week 6</a>, we first arrange components possible position. When ok, start to route. When finished, exported PNG for milling process.</h3>
+          <h3>Using <a href="week10.html">week 10</a> schematics as base, I replaced the LEDs and their resistors, the button and it's pullup resistor; with a RBG LED and 3 resistor on each leg.</h3>
+          <h3>Repeat same steps as <a href="week10.html">week 10</a>.</h3>
       </td>
       </tr>
       <!--Fila4-->
       <tr>
         <td>
           <h2>Milling and soldering</h2>
-            <h3>Steps for this operation are detailed on <a href="week4.html">week 4</a> and <a href="week6.html">week 6</a>.</h3>
-            <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.</h3>
-            <h3>Soldered, loaded week 6 code (little fix to turn on both LEDs) and tried continuity. Everything was ok</h3>
+            <h3>Repeating steps from <a href="week10.html">week 10</a>.</h3>
+            <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.
+              Also, due to the use of a broken 1/64 tool, the board had some debri on it. Had to remove with a lime. </h3>
+            <h3>Soldered, loaded a code I grab from <a href="https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/arduino-sketch">here.</a> (little tweek selecting the correct pin number) and tried continuity. Everything was ok</h3>
         </td>
         <td>
-          <img src="Imagenes\week10\w10_milling_result_detail.jpg" width="417px" height="339px"><img src="Imagenes\week10\w10_soldering_result.jpg" width="466px" height="320px">
+          <img src="Imagenes\week11\w11_milling_result.jpg" width="438px" height="339px"><img src="Imagenes\week11\w11_solder_result.jpg" width="574px" height="354px">
         </td>
       </tr>
       <!--Fila5-->
       <tr>
         <td>
-          <img src="Imagenes\week10\w10_milling_result_detail.jpg" width="417px" height="339px"><img src="Imagenes\week10\w10_soldering_result.jpg" width="466px" height="320px">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/L3AO-oRKkzk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </td>
         <td>
-          <h2>Programming</h2>
-            <h3>Steps for this operation are detailed on <a href="week4.html">week 4</a> and <a href="week6.html">week 6</a>.</h3>
-            <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.</h3>
-            <h3>Soldered and tried continuity. Everything was ok</h3>
+          <h2>Testing</h2>
+            <h3>This is the video of how it is working.</h3>
         </td>
       </tr>
       <!--Fila6-->
       <tr>
         <td>
-          <h2>Application connection</h2>
-            <h3>Steps for this operation are detailed on <a href="week4.html">week 4</a> and <a href="week6.html">week 6</a>.</h3>
-            <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.</h3>
-            <h3>Soldered and tried continuity. Everything was ok</h3>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
         </td>
         <td>
-            <img src="Imagenes\week10\w10_milling_result_detail.jpg" width="417px" height="339px"><img src="Imagenes\week10\w10_soldering_result.jpg" width="466px" height="320px">
+
         </td>
       </tr>
-          </table>  </div>
+
+          </table>
+        </div>
 
   <!--Footer-->
   <div class="container-footer">
