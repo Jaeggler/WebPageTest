@@ -113,7 +113,7 @@
       <!--Fila2-->
       <tr>
         <td>
-          <img src="Imagenes\week6\pcb_toroute.png" width="350px" height="240px"></td>
+          <img src="Imagenes\week6\w6_simulation.jpg" width="692px" height="316px"></td>
         <td>
             <h2>Simulation</h2>
               <h3>Using the TinkerCAD electronics simulator (TinkerCAD.com), I'm going to try to reproduce the circuit. Due this is a very basic -but free- simulator it doesn't have all components
@@ -142,12 +142,15 @@
             <h3>All steps are described in these <a href="https://learn.sparkfun.com/tutorials/using-eagle-schematic">schematic</a> and <a href="https://learn.sparkfun.com/tutorials/using-eagle-board-layout">boards</a> tutorias.
             I will be detailing all things specific for my assignment.</h3>
             </td>
-        <td><img src="Imagenes\week6\pcb_export.png" width="350px" height="240px"></td>
+        <td><img src="Imagenes\week6\w6_eagle_image.png" width="505px" height="393px"></td>
       </tr>
       <!--Fila4-->
       <tr>
         <td>
-          <img src="Imagenes\week6\components.jpg" width="350px" height="240px">></td>
+          <img src="Imagenes\week6\w6_sch_v1.jpg" width="743px" height="275px">v1<img src="Imagenes\week6\w6_sch_v2.jpg" width="743px" height="275px">v2
+          <img src="Imagenes\week6\w6_pcb_arrenge.jpg" width="323px" height="291px"><img src="Imagenes\week6\w6_final_pcb_v2.jpg" width="375px" height="305px">
+          <img src="Imagenes\week6\w6_export_board.png" width="428px" height="334px">
+        </td>
         <td>
             <h2>Re-draw board</h2>
               <h3>The first big change I'm doing is replace attiny44 with a 45 unit. This because I'm not adding the 20M crystal and FTDI header(used for serial comm), releasing 4 pins in total (44 has 6 more I/O than 45).
@@ -185,11 +188,11 @@
               <h3>Now the board is ready for soldering it's components.</h3>
         </td>
         <td>
-          <img src="Imagenes\week6\components.jpg" width="350px" height="240px">></td>
+          <img src="Imagenes\week6\w6_milling_data.jpg" width="504px" height="378px"><img src="Imagenes\week6\w6_milling_result.jpg" width="402px" height="368px"></td>
       </tr>
       <!--Fila6-->
       <tr>
-        <td><img src="Imagenes\week6\pcb_export.png" width="350px" height="240px"></td>
+        <td><img src="Imagenes\week6\w6_soldering_result.jpg" width="320px" height="264px"></td>
         <td>
           <h2>Soldering</h2>
             <h3>Grab all components and solder!</h3>
@@ -201,12 +204,33 @@
       <tr>
         <td>
             <h2>Programming and test</h2>
-              <h3>Before using the FabISP programmer, a need change the input pin number in the new code. Simulation uses PB5 for button imput but the new board would be using PB3. Only making change on
+            <h3>One thing I was noticed, is FabISP and AVRISP programmer do not supply 5v to the board, should be powered from outside! That was unexpected, since I removed FTDI connector. So decided to
+            solder two cables to the board (Vcc and GND) to be powered.</h3>
+              <h3>Before programming, a need change the input pin number in the new code. Simulation uses PB5 for button imput but the new board would be using PB3. Only making change on
               "buttonpin" variable will solve the problem.</h3>
-              <h3>After verifing burning was succed, test the board pressing the button. Should light LED on.</h3>
+              <h3>For this assingment I used an Arduino One as an ISP programmer. This <a href="https://www.youtube.com/watch?v=8SOUgyHXVG0">video</a> shows how to setup your Arduino One as a programmer.</h3>
+              <h3>I connected everything as shown in the video, and one thing I learnt is the arduino can be an ISP and CAN supply 5v to the board, so my first "fix" was unnecesary.</h3>
+              <h3>Now I will copy the code from Tinkercad to Arduino IDE. For the Arduino to send info to the attiny, first we need to load the attiny library. Here is a
+              <a href="https://create.arduino.cc/projecthub/arjun/programming-attiny85-with-arduino-uno-afb829">tutorial</a> how to add attiny library to Arduino IDE. </h3>
+              <h3>With everything connected, loaded the program from Tinkercad (files at the bottom) to Arduino IDE, and program show "Done uploading", a confirmation of success.</h3>
+              <h3>Disconected all but VCC and ground an test (LED should turn on when button press).</h3>
               <h3>Succed!</h3>
+            </td>
         <td>
-          <img src="Imagenes\week6\components.jpg" width="350px" height="240px">></td>
+          <img src="Imagenes\week6\w6_fixing.jpg" width="264px" height="210px"><img src="Imagenes\week6\w6_pinout.png" width="600" height="268px">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/dOPnPUfhEAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </td>
+      </tr>
+      <!--Fila7-->
+      <tr>
+        <td>
+          <h2>Downloads</h2>
+          <h3>Finally in this section the files to download:</h3>
+          <h3><ul>
+            <li><a href="Files\week6\w6_electronic_design.ino" download>Arduino code</a></li>
+            <li><a href="Files\week6\Week6_Electronic Design.rar" download>Schematics and boar</a></li>
+          </ul></h3>
+        </td>
       </tr>
     </table>
   </div>
