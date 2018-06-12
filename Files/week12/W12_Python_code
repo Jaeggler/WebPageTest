@@ -1,0 +1,29 @@
+from tkinter import *
+import serial
+
+#Open ports
+
+port1 = serial.Serial("COM6", 9600)
+
+def button1 ():
+    port1.write(b'1')
+
+def button2 ():
+    port1.write(b'2')
+
+#initialize
+
+root = Tk()
+root.geometry("100x100")
+root.title("color change")
+
+#Create items
+B1 = Button(root, text="RED", command=button1)
+B1.pack()
+B1.flash()
+
+B2 = Button(root, text="GREEN", command=button2)
+B2.pack()
+B2.flash()
+
+root.mainloop()
