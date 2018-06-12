@@ -64,7 +64,7 @@
           <td>
             <ul>
               <li>Arduino IDE - Programming Enviroment</li>
-              <li>FABisp - Burner</li>
+              <li>Arduino as ISP</li>
             </ul>
         </td>
         </tr>
@@ -99,50 +99,54 @@
       <!--Fila1-->
       <tr>
         <td>
+          <img src="Imagenes\week8\w8_tiny45_pinout.png" width="458px" height="164px">
           </td>
         <td>
           <h2>Micro Datasheet</h2>
-            <h3>In this assigment I will ve using the Electronics Production week board I did. This is an attiny44a micro from AVR. I found the micro datasheet at this link.</h3>
-            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet" (link here), which summaries the most important
+            <h3>In this assigment I will ve using the Electronics Design week board I did. This is an attiny45 micro from AVR. I found the micro datasheet at this
+               <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet-Summary.pdf">link</a>.</h3>
+            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet" <a href="https://www.sparkfun.com/tutorials/223">(link here)</a>, which summaries the most important
             stuff when not having experience with electronics.</h3>
             <h3>According to the guide, I will be looking for: summary, specifications, pinout, absolute ratings, recommended operation conditions and example schematics. </h3>
-            <h3></h3>
+            <h3>Attiny 45 it's a 8 pin microcontroller. Taking VCC and GROUND pins, the micro have 6 I/O pins from which usually you dont use the RESET one. The micro have 4K storage, meaning it have
+            really short space. The lighter the code, the better.</h3>
         </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
             <h2>Programming</h2>
-              <h3>When doing Electronics design week, I programmed the echo-hello board for having a LED and a button. For this week Im going to make the light blink and the button will stop that blink.</h3>
-              <h3>I will be using the Arduino IDE to connect the board and program it with Arduino languaje and C languaje, just to verify it can work with both.</h3>
-              <h3>Using the Sparkfun guide "Tiny AVR Programmer Hookup Guide" (Link Here) I will be using the programmer we did during week 2 and Arduino IDE.
-                The guide also explains how to donwload driver for attiny micros and Arduino IDE set up for programming. T</h3>
+              <h3>I will be using the Arduino IDE to check memory difference between Arduino Languaje and C Languaje. I will download a blink code with Arduino and C Languaje to compare main diferences.</h3>
         </td>
         <td>
+          <img src="Imagenes\week8\w8_arduino_ide.jpg" width="720px" height="405px">
+        </td>
 
       </tr>
       <!--Fila3-->
       <tr>
-        <td></td>
         <td>
-          <h2>Arduino languaje</h2>
-            <h3>Using Arduino IDE I programmed the blink code.</h3>
-
-            </td>
-
-      </tr>
-      <!--Fila4-->
-
-      <tr>
-        <td>
-            <h2>C Languaje</h2>
-              <h3></h3>
-              <h3></h3>
-              <h3></h3>
+            <img src="Imagenes\week8\w8_arduino_blink_usage.png" width="230px" height="71px">
         </td>
         <td>
-    </td>
+          <h2>Arduino languaje</h2>
+            <h3>Using Arduino IDE I programmed the blink code (files bottom of page). When loaded to the W6 board I can see it uses 22% of the storage. Datasheet details the program memory size is 4KB.</h3>
+            <h3></h3>
+            <h2>C Languaje</h2>
+              <h3>Using Arduino IDE I programmed the blink code with C code (files bottom of page). When loaded to the W6 board I can see it uses only 2% of the storage. Meaning everytime I program something
+            , I'm adding all library to the memory. Bad side of this, its C code it's really unfrindly making it better to situation where you need to improve your storage. For quick works, using Arduino would be better.
+            </td>
+      </tr>
 
+
+      <!--Fila4-->
+      <tr>
+        <td>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+        </td>
+        <td>
+        </td>
       </tr>
     </table>
   </div>
