@@ -111,11 +111,16 @@
               <h3>We were using one Arduino One to recive all info from the UI and this board will be sending serial data to the other 2. Another board would be carrying the CNC shield, and will be the "motor"
               board. The last one will be the LED controller.</h3>
               </td>
+      <td>
+
+      </td>
       </tr>
-    </table>
-  </div>
+
       <!--Fila2-->
       <tr>
+        <td>
+          <img src="Imagenes\week14\w14_program_design.jpg" width="300px" height="400px">
+        </td>
         <td>
           <h2>Program.</h2>
             <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
@@ -126,11 +131,35 @@
       <!--Fila3-->
       <tr>
         <td>
-          <h2>Program.</h2>
-            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
-              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
-              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
+          <h2>Test</h2>
+            <h3>This are videos of our tests. Free motor movement and how LED works within each pin.</h3>
             </td>
+            <td>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/TUjKpq7FrAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/n3RboYKq-RQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </td>
+      </tr>
+      <!--Fila4-->
+      <tr>
+        <td>
+          <img src="Imagenes\week14\w14_current_limiting1.jpg" width="300px" height="400px"><img src="Imagenes\week14\w14_current_limiting2.jpg" width="300px" height="400px">
+        </td>
+
+          <td>
+          <h2>Driver Tuning</h2>
+            <h3>We are using a CNC shield with 4 motor drivers from Texas Instruments (DRV8825). Those drivers need to set for each stepper motor. Each unit controls current passing to the steeper,
+            if the driver let to much current (driver > rated value motor) might damage the stepper.</h3>
+            <h3>For this type of driver, there is a formula using reference voltage. For a tutorial for current limiting <a href="https://www.pololu.com/product/2133">pololu webpage<a> details how to.</h3>
+            </td>
+      </tr>
+      <!--Fila5-->
+      <tr>
+        <td>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+        </td>
+        <td>
+        </td>
       </tr>
 
     </table>
