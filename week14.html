@@ -97,13 +97,42 @@
   <!--Main-->
   <div class="container-main">
     <table>
+      <!--Fila1-->
+      <tr>
+        <td>
+          <h2>Group Work - Task</h2>
+            <h3>My work in this assignment was to write the first code and tuning motor movement. We decided to use Arduino One boards (3), with a CNC shield for stepper motor control.</h3>
+            <h3>Our machine had 2 core opeartions:</h3>
+            <h3><ul>
+              <li>XYmovement<li>
+              <li>RGB LEDs</li>
+                <ul>
+                </h3>
+              <h3>We were using one Arduino One to recive all info from the UI and this board will be sending serial data to the other 2. Another board would be carrying the CNC shield, and will be the "motor"
+              board. The last one will be the LED controller.</h3>
+              </td>
+      </tr>
+    </table>
+  </div>
       <!--Fila2-->
       <tr>
         <td>
-          <h2>Jump to!</h2>
-            <h3>This week our group assignment is in http://archive.fabacademy.org/archives/2017/fablabtecsup/students/446/MechanicalDesignGroupAssignment.html </h3>
+          <h2>Program.</h2>
+            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
+              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
+              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
             </td>
       </tr>
+      <!--Fila3-->
+      <tr>
+        <td>
+          <h2>Program.</h2>
+            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
+              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
+              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
+            </td>
+      </tr>
+
     </table>
   </div>
 
