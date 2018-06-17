@@ -1,48 +1,189 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Assignment2</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+
+<!--GENERAL HEAD CLUSTER-->
+<head>
+  <title>Final Project</title>
+
+  <link href="reset.css" type="text/css" rel="stylesheet">
+  <link href="grid-week.css" type="text/css" rel="stylesheet">
+  <link href="general_style.css" type="text/css" rel="stylesheet">
+  <link href="week_style.css" type="text/css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
+<!--GENERAL BODY CLUSTER-->
 <body>
-  <div class="container">
-    <header >
-    <img id="headlogo" src="Imagenes/Fabacademy2017.png">
-  </header>
-  <div class="navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
+<div class="grid-container">
+
+  <!--Header-->
+  <div class="container-header">
+      <img id="headlogo" src="Imagenes/Fabacademy2017.png">
   </div>
-  <div class="contenido" id="contenidoassignment">
+
+  <!--Navegation-->
+  <div class="container-navigation">
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <a href="about.html"><li>About</li></a>
+      <a href="finalp.html"><li>Final Project!</li></a>
+    </ul>
+    </div>
+
+  <!--Sidebar - Objetivos-->
+  <div class="container-side">
+    <div class="sidebar">
+
+    <div class="objectives">
+      <table>
+        <tr>
+          <th>
+              <h1>OBJECTIVES</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+          <ul>
+            <li>Define a final project</li>
+            <li>Planning the project</li>
+            <li>Develop your project</li>
+          </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="tools">
+      <table>
+        <tr>
+          <th>
+              <h1>ASSIGNMENT TOOLS</h1>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Atom - Text Editor</li>
+              <li>GitKraken - Git Client</li>
+              <li>Eagle Software</li>
+              <li>Laser cutter</li>
+              <li>Roland CNC</li>
+            </ul>
+        </td>
+        </tr>
+      </table>
+    </div>
+
+  <div class="workflow">
+    <table>
+      <tr>
+        <th>
+            <h1>WORKFLOW</h1>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <ol>
+            <li>Define the project</li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+      </td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  </div>
+
+  <!--Main-->
+  <div class="container-main">
 
     <table>
-      <!--Fila1-->
-      <tr>
-        <td><img src="Imagenes\finalp\final_project_img.jpeg" width="400px" height="600px"></td>
+        <!--Fila1-->
+        <tr>
+          <td><iframe width="640" height="360" src="https://www.youtube.com/embed/KU5p2WvCuyI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
 
-        <td>
-           <h2>Concept</h2>
-              <h3>For my final proyect I was thinking in a RC car with a camera. The car is going to be controlled with a smartphone app,
-                 which allows to control the car in a "free mode" or "program" it in a fixed position related to a "reference". The reference
-                 is held by the owner which will command the car to be a "x" distance or "y" height (if the car is in a different ground level).
-                 The car will follow the owner and keep the programmed distance in any moment with the camera always following the reference.
-           </h3>
+          <td>
+             <h2>Defining the project</h2>
+                <h3>I was thinking to do a electronic game. Something based on Hasbro's Simon, but with a more challenging programmng and a time counter.</h3>
+                <h3>Originally I was planning to do the core Simon game (after all lights blinked, you should press each light in the correct order), but with lights switching positions at the end,
+                but later I found there is a similar Simon game with that features (See Simon Trickster).</h3>
+                <h3>Decided to keep sticking to Simon structure, but for my work I will be mixing colors. Using RGB LEDs, mixed colors pretend to confuse players to hit colors wrong.</h3>
+              <h3>Lastly, when game starts, a time counter (up to 9 seconds) will countdown each action. If a player haven't press a color and timer reached 0. It will count as wrong hit.</h3>
+            <h3>The video shows how HASBRO's Simon Trickster works.</h3>}
+          <h3>I will call my device the FER-1 (Funny Entretaining Recreation - 1)</h3></td>
+        </tr>
+        <!--Fila2-->
+        <tr>
+          <td>
+            <h2>Planning </h2>
+              <h3>First, my sketch. There it show the Fer-1, with 3 nodes. Each node will have a microcontroller, RGB led, and a button. So when the main board sends the corresponding light,
+              the RGB will turn on and the button will allow the micro to send a response back.</h3>
+              <h3>Each game mode will have the same mechanics:</h3>
+              <h3>
+                <ul>
+                  <li>When start button is pressed, a color will blink (randomly) in any of the possible 3 positions. May blink twice on the same spot or jump to another.</li>
+                  <li>After all secuence has light, randomly a color will display on each spot. All colors displayed are different</li>
+                  <li>The player should press the color accordly to the secuence. If press wrong, the game ends.</li>
+                  <li>If secuence is pressed correctly, the game will blink white color on all spots, which means win.</li>
+                </ul>
+              </h3>
+              <h3>Second, will use TinkerCAD for simulate my system. Using Arduino One and Attiny micro will test connection and programming code.</h3>
+              <h3>Third, will develop boards using Autodesk Eagle.</h3>
+              <h3>Lastly, will design game housing using Autodesk Fusion. Using Eagle's stp export feature, will use the 3D design of my board and load it to Autodesk Fusion for full mechatronic
+              integration. Housing will be MDF and acrylic, modelled with Laser cutter.</h3>
+             </td>
+          <td><img src="Imagenes\finalp\FP_planning.png" width="667px" height="353px"></td>
+        </tr>
+        <!--Fila3-->
+        <tr>
+          <td><img src="Imagenes\finalp\FP_sketch.jpg" width="506px" height="378px"></td>
+          <td>
+            <h2>Sketching</h2>
+            <h3>This image shows the first idea of the game. The main board will be a Fabduino, connected to a board which will serve as a hub for serial communication with peripheral boards
+              (or Spots) and where start button and the 7 segment display will be connected. </h3>
+              <h3>The peripheral boards or SPOTs will be small boards with a microcontroller (the first idea was using attiny45 microcontroller), RGB LED and a button.</h3>
+              <h3>Using this model I'll use TInkerCAD to run simulation.</h3>
             </td>
-      </tr>
+        </tr>
+        <!--Fila4-->
+        <tr>
+          <td>
+            <h2>Simulation</h2>
+            <h3>In this part I will test a 2 "colors" circuit. I'm building the circuit using 3 Arduino One (not using attiny yet since im not sure about how many pins do I need).
+              Created a new schematic in TinkerCAD and loaded:</h3>
+            <h3>
+              <ul>
+                <li>Arduino Uno x 3</li>
+                <li>Breadboard mini x4</li>
+                <li>Resistor x6</li>
+                <li>RGB LED x2</li>
+                <li>Button</li>
+              </ul>
+            </h3>
+            <h3></h3>
+            <h2>Simulation 1</h2>
+            <h3>One Arduino will act as a command board, the other two will manage actions on each "spot". Final connection shown on image.</h3>
+            <h3>With this configuration, my first test: when button is press, the main board will pulse '1', and '2' after 2 seconds. the RGB LEDs will turn on changing between
+              red, green and purple when character sent matches its ID (ID = 1 to spot 1 and 2 for the other). Code used in this test: <a href="code\finalp\fp_sim1_main.ino">main</a>,
+              <a href="code\finalp\fp_sim1_spot.ino"> spots</a>.</h3>
+            <h3></h3>
+          </h2>Simulation 2</h2>
+          <h3>Now we are making the program much similar to the inteded functionality.</h3>
+          </td>
+          <td><img src="Imagenes\finalp\FP_simulation1.png" width="540px" height="371px"></td>
+        </tr>
 
-      <!--Fila2-->
-
-      <!--Fila3-->
-
-
-    </table>
-       </div>
+      </table>
   </div>
-    <footer>
-      <h4>Made by Diego Santa Cruz Meono</h4>
-      <h4>FabAcademy2017</h4>
-    </footer>
+
+  <!--Footer-->
+  <div class="container-footer">
+    <h4>Made by Diego Santa Cruz Meono</h4>
+    <h4>FabAcademy2018</h4>
+  </div>
+</div>
 </body>
 </html>
