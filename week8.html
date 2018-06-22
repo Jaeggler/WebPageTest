@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W8-Embedded Programming</title>
+  <title>W8-Computer Controlled Machining</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Compare the performance and development workflows for other architectures.</li>
-            <li>Personal - Read a microcontroller data sheet. Program your board to do something, with as many different programming languages and programming environments as possible.</li>
+            <li>Group - test runout, alignment, speeds, feeds, and toolpaths for your machine.</li>
+            <li>Personal - Make something big (on a CNC machine).</li>
           </ul>
         </td>
         </tr>
@@ -63,8 +63,8 @@
         <tr>
           <td>
             <ul>
-              <li>Arduino IDE - Programming Enviroment</li>
-              <li>Arduino as ISP</li>
+              <li>Shopbot - Machine</li>
+              <li> Autodesk Inventor - Software</li>
             </ul>
         </td>
         </tr>
@@ -81,8 +81,10 @@
         <tr>
           <td>
             <ol>
-              <li>Read Micro DataSheet</li>
-              <li>Board Programming</li>
+              <li>CAD Design</li>
+              <li>Machine settings</li>
+              <li>Milling</li>
+              <li>Assembly!</li>
             </ol>
         </td>
         </tr>
@@ -98,54 +100,67 @@
 
       <!--Fila1-->
       <tr>
-        <td>
-          <img src="Imagenes\week8\w8_tiny45_pinout.png" width="458px" height="164px">
+        <td>-<img src="Imagenes\week8\w8-joint.png" width="350px" height="240px">
+            <img src="Imagenes\week8\w8-slot.png" width="165px" height="340px"><img src="Imagenes\week8\w8-parameters.png" width="465px" height="162px">
           </td>
         <td>
-          <h2>Micro Datasheet</h2>
-            <h3>In this assigment I will ve using the Electronics Design week board I did. This is an attiny45 micro from AVR. I found the micro datasheet at this
-               <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet-Summary.pdf">link</a>.</h3>
-            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet" <a href="https://www.sparkfun.com/tutorials/223">(link here)</a>, which summaries the most important
-            stuff when not having experience with electronics.</h3>
-            <h3>According to the guide, I will be looking for: summary, specifications, pinout, absolute ratings, recommended operation conditions and example schematics. </h3>
-            <h3>Attiny 45 it's a 8 pin microcontroller. Taking VCC and GROUND pins, the micro have 6 I/O pins from which usually you dont use the RESET one. The micro have 4K storage, meaning it have
-            really short space. The lighter the code, the better.</h3>
-        </td>
+          <h2>Model Design</h2>
+            <h3>For this week, I'm designing a table for my 3D Printer</h3>
+            <h3>I was needing a table with lower slots to keep material cartridge, filament spools and tools. Main dimensions were 400 x 400 mm on top, and aproximatly 650 mm height. The structure
+            must be rigid enough to reduce normal vibrations during work time, to avoid construction problems.I used a 1/8" tool for this assignment.</h3>
+            <h3>Comments</h3>
+            <h3>I used Inventor for the design. I made a simple model, but keep it parametric because I didnt know which material thickness we have available at the lab.
+               Finally used 12.5 mm MDF material.</h3>
+            <h3>Originally, I made relief ears on each slot, but was noticed the machine software takes care of that.</h3>
+            <h3><a href="Files\week8\STP.rar" download>Design download</a></h3>
+
+            </td>
+
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Programming</h2>
-              <h3>I will be using the Arduino IDE to check memory difference between Arduino Languaje and C Languaje. I will download a blink code with Arduino and C Languaje to compare main diferences.</h3>
+            <h2>Machine settings</h2>
+              <h3>Made my pieces distribution and loaded to the Shopbot. We set the machine parameters and guide bolts to fix material on the machine.</h3>
+              <h3>Comments</h3>
+              <h3>Have some issues with tabs that where half thickness. The software could not process naturally and a sub routine have to be added manually to avoid problems.</h3>
+              <h3>As said before, I remove the slot's relief ears to be added in this part, but we forgot to do that.</h3>
         </td>
         <td>
-          <img src="Imagenes\week8\w8_arduino_ide.jpg" width="720px" height="405px">
-        </td>
+          <img src="Imagenes\week8\w8-pieces_dist.png" width="356px" height="240px"><img src="Imagenes\week8\w8-prep.jpg" width="320px" height="240px">
+              <img src="Imagenes\week8\w8-routing.jpg" width="320px" height="240px"><img src="Imagenes\week8\w8-machine_settings.jpg" width="240px" height="320px">
+              <img src="Imagenes\week8\w8-guide_hole.jpg" width="320px" height="240px"><img src="Imagenes\week8\w8-calibrations.jpg" width="320px" height="240px"></td>
 
       </tr>
       <!--Fila3-->
       <tr>
+        <td><iframe width="854" height="480" src="https://www.youtube.com/embed/B7QvKJbo95k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
         <td>
-            <img src="Imagenes\week8\w8_arduino_blink_usage.png" width="230px" height="71px">
-        </td>
-        <td>
-          <h2>Arduino languaje</h2>
-            <h3>Using Arduino IDE I programmed the blink code (files bottom of page). When loaded to the W6 board I can see it uses 22% of the storage. Datasheet details the program memory size is 4KB.</h3>
-            <h3></h3>
-            <h2>C Languaje</h2>
-              <h3>Using Arduino IDE I programmed the blink code with C code (files bottom of page). When loaded to the W6 board I can see it uses only 2% of the storage. Meaning everytime I program something
-            , I'm adding all library to the memory. Bad side of this, its C code it's really unfrindly making it better to situation where you need to improve your storage. For quick works, using Arduino would be better.
+          <h2>Milling</h2>
+            <h3>My vid for milling</h3>
+
             </td>
+
       </tr>
-
-
       <!--Fila4-->
       <tr>
         <td>
-          <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+            <h2>Assembly</h2>
+              <h3>Finally the Avengers assembled!</h3>
+              <h3>Comments</h3>
+              <h3>I thought would have problems without slot reliefs, but in the end it was really smooth</h3>
         </td>
         <td>
+          <img src="Imagenes\week8\w8-assemble.jpg" width="320px" height="240px"><img src="Imagenes\week8\w8-halfway.jpg" width="320px" height="240px">
+        <img src="Imagenes\week8\w8-final.jpg" width="270px" height="480px"></td>
+      </tr>
+      <!--Fila6-->
+      <tr>
+        <td>
+        </td>
+        <td>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
         </td>
       </tr>
     </table>

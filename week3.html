@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W3-Computer Controlled Cutting</title>
+  <title>W3-CAD Design</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -44,9 +44,7 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Characterize your lasercutter, making lasercutter test part(s), making test part(s) that vary cutting settings and dimensions.</li>
-            <li>Personal - Design, lasercut, and document a parametric press-fit construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.</li>
-            <li>Personal - Cut something on the vinylcutter.</li>
+            <li>Model something using any CAD tool.</li>
           </ul>
         </td>
         </tr>
@@ -62,14 +60,13 @@
         <tr>
           <td>
             <ul>
-              <li>Corel Draw - Software</li>
-              <li>Lasercutter - Machine</li>
-              <li>Vinyl cutter - Machine</li>
+              <li>Autodesk Fusion</li>
             </ul>
         </td>
         </tr>
       </table>
     </div>
+
     <div class="workflow">
       <table>
         <tr>
@@ -80,10 +77,8 @@
         <tr>
           <td>
             <ol>
-              <li>Make test cuts</li>
-              <li>Design a construction kit</li>
-              <li>Demostrate parametric design</li>
-              <li>Something cut on vinyl</li>
+              <li>Select a 3D CAD software</li>
+              <li>3D Design procedure</li>
             </ol>
         </td>
         </tr>
@@ -95,87 +90,55 @@
   <!--Main-->
   <div class="container-main">
     <table>
+
       <!--Fila1-->
       <tr>
-        <td><img src="Imagenes\week3\WorkgroupImage.png" width="400px" height="400px"><img src="Imagenes\week3\WorkgroupImage2.png" width="400px" height="400px"></td>
-
         <td>
-           <h2>Groupwork</h2>
-              <h3>For this week assignment, the group decided to go with a joint tester. As the name suggest, the idea
-              was to have something that allow us to understand and test how laser cut is made. With an interesing hand-like tester
-            every one cut its own tester with different size slots</h3>
-              <h3>In this part worked with Inventor. I decided to design my own hand from scratch and put different dimension slots
-              in each finger tip, ranging from 2.80 to 3.20 mm. Also in the tumb, there are 4 slots with dimensions between 2 fingers (ie 2.85, 2.95, etc).
-            Finally, 5 slots where added in the palm and a stair-like tab for thickness measure. Each slot have its size increased in 0.02 mm.
-           </h3>
-           <h3>Comments</h3>
-            <h3>This was my first time doing laser cut. To this day, I never had to use this technology before and found it really interesting.
-            Sending the job was not that difficult, but jumping from Inventor, to Autocad and then to CorelDraw just to set the print layout was kind of tedious.
-            Sending the actual order to print was easier. In the lab there are known settings for each material. I used 3mm MDF, so run the print with 30% speed
-            and 90% power. The first try, there was a problem with dimension lines being cut insted of just be engraved. That was solved erasing the lines, cutting
-            then engraving.
-            Finally when doing the actual test, found that using the same dimension for tab and slot will cause loose-fitting. I was not considering laser diameter
-            and the slots were not the size wanted. The only time could get some close-fitting was using the tester thickness on the palm slots, probably because
-            "thickness" is not a value where laser diameter is involved. Next time I will be considering using a bigger dimension for tab and same for slot</h3>
-            </td>
+          <h2>2D/3D software selection</h2>
+            <h3>I have worked with Autodeks Inventor for a long time due my job. I used to work in a Mechanical Desing area so I'm used to do pieces and assemblies with 3D software.
+               Also I had to work with Autodesk AutoCAD in some cases when other collaborators need info in DWG format. In both cases, those are very powerful tools, but Autodesk Inventor is stronger than AutoCAD
+               thanks to the ability to assembly pieces and make object oriented drawings.</h3>
 
+              <h3>Other software that I tried were Solidworks, Autodesk Alias, Rinoceros, 123D, etc. I will not used them during this week
+               because I'm thinking in a parametric design and some of those tools are better suited for freeform work. Some good for piece design but lack assembly features (except for Solidworks which is a powefull 3D software, being Inventor long-last rival).
+               </h3>
+
+               <h3>For this assignment, I will be selecting Autodesk Fusion. My selection is based in 2 things: Similarity with Autodesk Inventor, which is a tool I already know; and free license. </h3>
+
+               <h3>Fusion have powerful features for hobbist and startups, so I think it will serve by far the needs. </h3>
+            </td>
+        <td><img src="Imagenes\week3\w3_fusionimage.jpg" width="480px" height="270px">
+        </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-          <h2>Parametric Set</h2>
-            <h3>For personal assignment we were to make a parametric set of pieces which allow us to build different things. I decided to make triangular pieces, with 2 slots
-              and 1 tab (see image).</h3>
-
-              <h3>I designed everything with Inventor. Since I'm more used to it's parametric tools, was easier for me to work. Designning the piece was not that difficult. I already
-              have in mind that would be a equilateral triangle with 2 slots and a tab. When thinking about the main piece, the idea of adding connections and a central slot
-              (actually 3 centered-slots but rotated 60 degrees between them) appeared. Finally I ended with the main piece being a triangle and 2 extra pieces for connections.</h3>
-
-
-              <h3>Comments</h3>
-              <h3>
-              It was harder thinking how the main piece would be than actually design it. Lucky for me I used to work doing parametric assemblies so was a piece of cake.
-              After receiving the laser cut, I notice my pieces where loose-fitting. Why?! That was the first question in my head. Every tab-slot test I did was really loose.
-              I was thinking in my design. "Where could be wrong? I'm sure my tab is 3mm and the slot is 3mm" After talking with one of the instructors everything came clear.
-              In my first test (with the hand tester), I thought that designing with same nomimal values (in this case 3mm) was correct, because I tested thickness with a similar slot.
-              But as detailed in the section above, thickness is not affected with laser diameter, so when designing the tab needs to be 0.1mm bigger than the slot. In my job I increased
-              the slot dimension (0.02mm) thinking that using nominal values will be too tight. The pieces did not wored as my cut is too loose to even stand by its own.
-               </h3>
-
-            </td>
-        <td><img src="Imagenes\week3\triangle_image.png" width="565px" height="500px"></td>
-      </tr>
-      <!--Fila3-->
-      <tr>
-        <td><img src="Imagenes\week3\VinylImage.png" width="660px" height="500px"></td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/t6wN9fWA0Rw" frameborder="0" allowfullscreen></iframe>
         <td>
-          <h2>Vinyl Cut</h2>
-          <h3>I wanted a Star Wars Stormtrooper sticker in my celphone for a long time, and this assignment was the right one to try to get it.
-          I downloaded an image from internet and paste it in CorelDraw, then vectorized to get the cutting lines. Once did that, exported to DXF format which the vinyl cutter accepts.
-        Since is a stormtrooper I want it to be black or white. </h3>
-        <h3>Vinyl cut - laser</h3>
-        <h3>I also cut vinyl with the laser cutter. I used the same files since the laser cutter accepts DXF and send it cut. The cut parameters where different from the MDF
-          material (see image).</h3>
+          <h2>3D Design</h2>
+          <h3>The good thing about Fusion it have lot of material to learn with built-in or in Youtube. You can learn from their own channel in this <a href="https://www.youtube.com/channel/UCiMwMz3RMbW5mbx0iDcRQ2g">link</a></h3>
+          <h3>When learning to design with 3D is good to start with this topics: Navigation tools (how to move the piece and the enviroment to better design), Sketching(The 2D draws that will turn into 3D), 3D Operations(Extrude, Roll, chanfer, etc)
+          and finally Assembly(How to connect different pieces or different assemblies to create and operating mechanism). In my case I will review each one with Fusion</h3>
+          <h3>In my experience, the first thing to define is: "Which going to be my final assembly?" and "how many sub-assemblies it going to have?". Having that in mind, I will start doing two pieces: the hand and the "fingers".
+            On the left is the video with the hand and finger design I made to test the software.</h3>
+            <h3></h3>
 
-          <h3>Comments</h3>
-          <h3>My design have a lot of details, also I reduced the image to fit in my 50 x 50 mm celphone back. With the vinyl cutter, I noticed that after several minutes, some details start
-          to separate. Even if you don't touch it, some details deforms. I used black vinyl and the most difficult part was trying to stick the image to my celphone. Due to its many details
-        it was imposible. Same thing happened with the laser cut. I could not manage to stick it, but noticed the cut was smoother than the vinyl cutter.</h3>
-
-        <h3>As a resumen, doesn't matter what machine you use for vinyl cut, it is important to use an image that you could "transplant" in less posible moves.</h3>
-
+            <h2>3D Design Process</h2>
+            <h3>Similar to Inventor, first we need to do a sketch. One thing different from Inventor is you probably will be working on the same file. You will be creating components directly
+            to the assembly. So I create the the sketch for the hand and and extrude it.</h3>
+            <h3>Once I have my first solid, need to add details. Used the chamfer command to reduce pointy edges and another sketch to create the finger slot. Also draw a point for later finger join.</h3>
+            <h3>Finally, creating the finger (with similar process as before), used the Joint command to attach it to the hand. Video will show the steps made.</h3>
         </td>
       </tr>
-      <!--Fila6-->
+      <!--Fila3-->
       <tr>
         <td>
         </td>
         <td>
           <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+            <h3>Files from this assignment are <a href="Files\week3\week3.rar" download>here</a>.</h3>
         </td>
       </tr>
-
     </table>
   </div>
 

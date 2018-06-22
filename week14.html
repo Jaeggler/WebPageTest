@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W14-Machine Design</title>
+  <title>W14-Networking and Communication</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Design a machine (mechanism + actuation + automation), including the end effector, build the passive parts and operate it manually.</li>
-            <li>Personal - Plan and make a machine. Document the group project and your individual contribution.</li>
+            <li>Group - group project.</li>
+            <li>Personal - Design and build a wired &/or wireless network connecting at least two processors</li>
           </ul>
         </td>
         </tr>
@@ -81,10 +81,10 @@
         <tr>
           <td>
             <ol>
-              <li>Design machine</li>
-              <li>Design control</li>
-              <li>Building</li>
-              <li>Test!</li>
+              <li>Design Network</li>
+              <li>Simulation</li>
+              <li>Programming with board</li>
+              <li></li>
             </ol>
         </td>
         </tr>
@@ -100,59 +100,39 @@
       <!--Fila1-->
       <tr>
         <td>
-          <h2>Group Work - Task</h2>
-            <h3>My work in this assignment was to write the first code and tuning motor movement. We decided to use Arduino One boards (3), with a CNC shield for stepper motor control.</h3>
-            <h3>Our machine had 2 core opeartions:</h3>
-            <h3><ul>
-              <li>XYmovement<li>
-              <li>RGB LEDs</li>
-                <ul>
-                </h3>
-              <h3>We were using one Arduino One to recive all info from the UI and this board will be sending serial data to the other 2. Another board would be carrying the CNC shield, and will be the "motor"
-              board. The last one will be the LED controller.</h3>
-              </td>
-      <td>
+          </td>
+        <td>
+          <h2>Design Network</h2>
+            <h3>I will use a Arduino One board to send serial data to an output board. </h3>
 
-      </td>
+        </td>
+
       </tr>
-
       <!--Fila2-->
       <tr>
         <td>
-          <img src="Imagenes\week14\w14_program_design.jpg" width="300px" height="400px">
+            <h2>Simulation</h2>
+              <h3>First I will simulate a serial comm network. Using two Arduino Boards, I will send data (1 and 2), and the other board will light one LED each time.</h3>
+              <h3>I'm using Rx and Tx pin (RS232) for this test.</h3>
+              <h3>The program used for this test is at the bottom of the page.</h3>
         </td>
         <td>
-          <h2>Program.</h2>
-            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
-              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
-              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
-            </td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/85LoTZfYEeg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </td>
+
       </tr>
       <!--Fila3-->
       <tr>
+        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/epYSOkysRbQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
         <td>
-          <h2>Test</h2>
-            <h3>This are videos of our tests. Free motor movement and how LED works within each pin.</h3>
-            </td>
-            <td>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/TUjKpq7FrAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/n3RboYKq-RQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </td>
-      </tr>
-      <!--Fila4-->
-      <tr>
-        <td>
-          <img src="Imagenes\week14\w14_current_limiting1.jpg" width="300px" height="400px"><img src="Imagenes\week14\w14_current_limiting2.jpg" width="300px" height="400px">
+          <h2>With self board</h2>
+            <h3>Using Neil RS232 programming, I set the Arduino One to send pulse equal to the output board Node code (Check code at the files). When reciving data, the LED on the output board blinks
+            slowly. When no data is coming blinks faster. </h3>
+            <h3>All programming its done with a Arduino ONE as an ISP.</h3>
         </td>
 
-          <td>
-          <h2>Driver Tuning</h2>
-            <h3>We are using a CNC shield with 4 motor drivers from Texas Instruments (DRV8825). Those drivers need to set for each stepper motor. Each unit controls current passing to the steeper,
-            if the driver let to much current (driver > rated value motor) might damage the stepper.</h3>
-            <h3>For this type of driver, there is a formula using reference voltage. For a tutorial for current limiting <a href="https://www.pololu.com/product/2133">pololu webpage<a> details how to.</h3>
-            </td>
       </tr>
-      <!--Fila5-->
+      <!--Fila4-->
       <tr>
         <td>
           <h2>Files</h2>
@@ -161,6 +141,7 @@
         <td>
         </td>
       </tr>
+
 
     </table>
   </div>

@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W13-Networking and Communication</title>
+  <title>W13-Interface and Application Programming</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,7 @@
         <tr>
           <td>
           <ul>
-            <li>Group - group project.</li>
-            <li>Personal - Design and build a wired &/or wireless network connecting at least two processors</li>
+            <li>Write an application that interfaces with an input and/or output device that you made, comparing as many tool options as possible.</li>
           </ul>
         </td>
         </tr>
@@ -63,8 +62,8 @@
         <tr>
           <td>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Tkinter - Python GUI</li>
+              <li>Last week board</li>
             </ul>
         </td>
         </tr>
@@ -81,10 +80,10 @@
         <tr>
           <td>
             <ol>
-              <li>Design Network</li>
-              <li>Simulation</li>
-              <li>Programming with board</li>
-              <li></li>
+              <li>Python, Tkinter and Pyserial</li>
+              <li>GUI Design</li>
+              <li>Programming</li>
+              <li>Test!</li>
             </ol>
         </td>
         </tr>
@@ -97,42 +96,54 @@
   <!--Main-->
   <div class="container-main">
     <table>
+
       <!--Fila1-->
       <tr>
         <td>
+          <h2>Python, Tkinter and Pyserial</h2>
+            <h3>Tutorial for installing Python <a href="https://www.howtogeek.com/197947/how-to-install-python-on-windows/">here</a>.</h3>
+            <h3>Tutorial for installing Tkinter <a href="https://tkdocs.com/tutorial/install.html">here</a></h3>
+            <h3>Tutorial for isntalling Pyserial <a href="http://pyserial.readthedocs.io/en/latest/pyserial.html">here</a></h3>
           </td>
         <td>
-          <h2>Design Network</h2>
-            <h3>I will use a Arduino One board to send serial data to an output board. </h3>
-
-        </td>
+          <img src="Imagenes\week13\w13_python_setup.jpg" width="306px" height="224px">
+            </td>
 
       </tr>
       <!--Fila2-->
       <tr>
+      <td>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jM8Ck7AHWGc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </td>
+          <td>
+            <h2>Test</h2>
+              <h3>First test will make the interface send bits '1' or '2' to connected LEDs. When 1 is read at the Arduino, red LED will turn ON; when '2', green LED will turn ON and switch red LED off.</h3>
+            </td>
+      </tr>
+      <!--Fila2-->
+      <tr>
         <td>
-            <h2>Simulation</h2>
-              <h3>First I will simulate a serial comm network. Using two Arduino Boards, I will send data (1 and 2), and the other board will light one LED each time.</h3>
-              <h3>I'm using Rx and Tx pin (RS232) for this test.</h3>
-              <h3>The program used for this test is at the bottom of the page.</h3>
+            <h2>GUI Design</h2>
+              <h3>For this assignment, I will program a Tkinter interface to send bits of info to a Arduino board. This board will then turn 2 pins, pins connected to output board (RGB).  </h3>
+              <h3>Code for Python interface needs Python as base, Tkinter as GUI and Pyserial for Serial Comm.
+              <h3>Code for interface at bottom.</h3>
         </td>
         <td>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/85LoTZfYEeg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </td>
-
+          <img src="Imagenes\week13\w13_interface.png" width="306px" height="224px">
+        </td>
       </tr>
       <!--Fila3-->
       <tr>
-        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/epYSOkysRbQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
         <td>
-          <h2>With self board</h2>
-            <h3>Using Neil RS232 programming, I set the Arduino One to send pulse equal to the output board Node code (Check code at the files). When reciving data, the LED on the output board blinks
-            slowly. When no data is coming blinks faster. </h3>
-            <h3>All programming its done with a Arduino ONE as an ISP.</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PpF9EKKITdo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </td>
+        <td>
+          <h2>Testing with OUTPUT board.</h2>
+            <h3>Code for the attiny, its loaded (link at the bottom). When "Red" button at the interface its pressed, HIGH status change at pin9 in Arduino, feeding Pin 2 at output board. That changes
+            </td>
 
       </tr>
-      <!--Fila4-->
+      <!--Fila6-->
       <tr>
         <td>
           <h2>Files</h2>
@@ -141,8 +152,6 @@
         <td>
         </td>
       </tr>
-
-
     </table>
   </div>
 

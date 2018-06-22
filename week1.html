@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W1-WebDesign</title>
+  <title>W1-Principles and practices</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,27 +45,9 @@
         <tr>
           <td>
           <ul>
-            <li>Build a personal site, describing you, your weekly assignments and your final project.</li>
-            <li>Upload it to the class archive. Work through a git tutorial.</li>
+            <li>Make a sketch of your final project.</li>
+            <li>Describe uses of the work.</li>
           </ul>
-        </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="tools">
-      <table>
-        <tr>
-          <th>
-              <h1>ASSIGNMENT TOOLS</h1>
-          </th>
-        </tr>
-        <tr>
-          <td>
-            <ul>
-              <li>Atom - Text Editor</li>
-              <li>GitKraken - Git Client</li>
-            </ul>
         </td>
         </tr>
       </table>
@@ -81,10 +63,10 @@
       <tr>
         <td>
           <ol>
-            <li>Learn about HTML</li>
-            <li>Select programming editor</li>
-            <li>Develop a web page from scratch (personal choice)</li>
-            <li>Upload using Git</li>
+            <li>Describe the project</li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ol>
       </td>
       </tr>
@@ -99,53 +81,51 @@
     <table>
         <!--Fila1-->
         <tr>
-          <td><img src="Imagenes\week1\CodeAcademy.PNG" width="600px" height="300px"></td>
+          <td><iframe width="640" height="360" src="https://www.youtube.com/embed/KU5p2WvCuyI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
 
           <td>
-             <h2>Html code</h2>
-                <h3>For this assignment, the first thing that came to my head was to force my self to code
-                  every part of the web page. That would give me total control over the site and updating would
-                  be easier. With that in mind, I would be needing to learn html code.</h3>
-                <h3>I went then to CodeAcademy.com. I have been learning Javascrip in the past with great pleasure, so went
-                  back to check their HTML courses. After several hours with in-web practice, I was ready to try with my own website.</h3>
+            <h2>Defining the project</h2>
+               <h3>I was thinking to do a electronic game. Something based on Hasbro's Simon, but with a more challenging programming and a time counter.</h3>
+               <h3>Originally I was planning to do the core Simon game (after all lights blinked, you should press each light in the correct order), but with lights switching positions at the end,
+               but later I found there is a similar Simon game with that features (See Simon Trickster).</h3>
+               <h3>Decided to keep sticking to Simon structure, but for my work I will be mixing colors. Using RGB LEDs, mixed colors pretend to confuse players to hit colors wrong.</h3>
+             <h3>Lastly, when game starts, a time counter (up to 9 seconds) will countdown each action. If a player haven't press a color and timer reached 0. It will count as wrong hit.</h3>
+           <h3>The video shows how HASBRO's Simon Trickster works.</h3>}
+         <h3>I will call my device the FER-1 (Funny Entretaining Recreation - 1)</h3></td>
                       </td>
         </tr>
         <!--Fila2-->
         <tr>
           <td>
-            <h2>Editor selection</h2>
-              <h3>I have some experience with coding, so I was thinking in using my installed editor for web code.
-              It is TextWrangler, which is installed in my Macbookpro. It's a very simple editor but enought for simple task.
-               I tried for a while, but I wasn't getting confortable with it. That's when decided to look for something else.
-               My search lead me to Atom editor. It is a simple but powerfull program with a very autopilot UI. In a couple of hours,
-               I was working with no problems. I even installed a preview addon, that let me see my html display in real time. Very helpful.</h3>
+            <h2>Planning </h2>
+              <h3>First, my sketch. There it show the Fer-1, with 3 nodes. Each node will have a microcontroller, RGB led, and a button. So when the main board sends the corresponding light,
+              the RGB will turn on and the button will allow the micro to send a response back.</h3>
+              <h3>Each game mode will have the same mechanics:</h3>
+              <h3>
+                <ul>
+                  <li>When start button is pressed, a color will blink (randomly) in any of the possible 3 positions. May blink twice on the same spot or jump to another.</li>
+                  <li>After all secuence has light, randomly a color will display on each spot. All colors displayed are different</li>
+                  <li>The player should press the color accordly to the secuence. If press wrong, the game ends.</li>
+                  <li>If secuence is pressed correctly, the game will blink white color on all spots, which means win.</li>
+                </ul>
+              </h3>
+              <h3>Second, will use TinkerCAD for simulate my system. Using Arduino One and Attiny micro will test connection and programming code.</h3>
+              <h3>Third, will develop boards using Autodesk Eagle.</h3>
+              <h3>Lastly, will design game housing using Autodesk Fusion. Using Eagle's stp export feature, will use the 3D design of my board and load it to Autodesk Fusion for full mechatronic
+              integration. Housing will be MDF and acrylic, modelled with Laser cutter.</h3>
              </td>
-          <td><img src="Imagenes\week1\AtomEditor.png" width="642px" height="250px"></td>
+          <td><img src="Imagenes\week1\w1_planning.png" width="667px" height="353px"></td>
         </tr>
         <!--Fila3-->
         <tr>
-          <td><img src="Imagenes\week1\WebDevelop.PNG" width="483px" height="300px"></td>
+          <td><img src="Imagenes\week1\w1_sketch.jpg" width="506px" height="378px"></td>
           <td>
-            <h2>Web Develop</h2>
-            <h3>The hardest part of the job was making everything works from ground. With no template for reference,
-              I could only look in internet for several websites and check their source code to learn the "good practice".
-              Even with CodeAcademy open, finding why my text doesn't get into position was very frustrating in the beginning.
-              It is after several tries that I could make the layout for the home page, but the nightmare wasn't over. Learning that
-              it is important to make a good template is what will save time in the future. Even now I think my web will need a lot
-              of more improvement. </h3>
-
+            <h2>Sketching</h2>
+            <h3>This image shows the first idea of the game. The main board will be a Fabduino, connected to a board which will serve as a hub for serial communication with peripheral boards
+              (or Spots) and where start button and the 7 segment display will be connected. </h3>
+              <h3>The peripheral boards or SPOTs will be small boards with a microcontroller (the first idea was using attiny45 microcontroller), RGB LED and a button.</h3>
+              <h3>Using this model I'll use TInkerCAD to run simulation.</h3>
             </td>
-        </tr>
-        <!--Fila4-->
-        <tr>
-          <td>
-            <h2>Git time!</h2>
-            <h3>With my experience in game development, knowing how to deal with git was simple. Once you understand what happens when you
-              pull info and how to commit every change, you have learned (in my opinion) 70% to 80% of the git model.
-              One thing that I didn't know was how to deploy a website using git. Some people was telling me that should use git to connect
-              to the repository. Because I also use a Mac, I could not use that option, instead downloaded Git Kraken for the job. No problems at all.</h3>
-          </td>
-          <td><img src="Imagenes\week1\GitKraken.PNG" width="543px" height="300px"></td>
         </tr>
 
       </table>

@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W16-Intellectual property</title>
+  <title>W16-Machine Design</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,9 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Create and document a license for your final project. </li>
-            <li>Develop a plan for dissemination of your final project.</li>
-              <li>Prepare a summary slide (presentation.png, 1280x1024) and video clip (presentation.mp4, 1080p HTML5, < ~minute, < ~10 MB) in your root directory</li>
+            <li>Group - Design a machine (mechanism + actuation + automation), including the end effector, build the passive parts and operate it manually.</li>
+            <li>Personal - Plan and make a machine. Document the group project and your individual contribution.</li>
           </ul>
         </td>
         </tr>
@@ -82,10 +81,10 @@
         <tr>
           <td>
             <ol>
-              <li>Recognize Local and Foreing license</li>
-              <li>Compare</li>
-              <li>Choose one for the project</li>
-              <li>Make project presentation</li>
+              <li>Design machine</li>
+              <li>Design control</li>
+              <li>Building</li>
+              <li>Test!</li>
             </ol>
         </td>
         </tr>
@@ -98,68 +97,69 @@
   <!--Main-->
   <div class="container-main">
     <table>
-
       <!--Fila1-->
       <tr>
         <td>
-          <img src="Imagenes\week16\w16_Open-source-hardware-logo.png" width="200px" height="210px">
-        </td>
-        <td>
-          <h2>Understanding</h2>
-            <h3>Licensing is a complex matter as open-electronics.org suggest in their guide <a href="https://www.open-electronics.org/how-to-choose-your-open-source-hardware-license/">"How to choose your Open Hardware License"</a>.
-               Making note of the difference between software and hardware licensing, the guide suggest to focus in the objective of your work:making money with something exclusive for you, share knowledge, serve as inspiration for other derivations, etc.
-             As they detail, hardware licensing is more complex than software, that is due the ability to re-engineer every "machine" available; contrary to software which can be protected with just distribute executables files.
-             Dependending of which is your work's target, or your target community, there are several available license types.</h3>
-             <h3> </h3>
-            <h2>Types of License</h2>
-            <h3>Open Source Initiative <a href="opensource.org">(opensource.org)</a>, it's a public benefic corporation to promote awareness and the importance of non-proprietary software.
-             In their web can be found lots of information about Open Hardware related documents and license. From their web you can check which features you would like your license to have.
-             </h3>
-            <h3>Other posibility is to check the Creative Commons website <a href="creativecommons.org">(creativecommons.org)</a>. There you can find a useful tool which will help you to create your license with every feature you want from a list.
-           </h3>
-           <h3> <!--Blanck space for separation--></h3>
-            </td>
+          <h2>Group Work - Task</h2>
+            <h3>My work in this assignment was to write the first code and tuning motor movement. We decided to use Arduino One boards (3), with a CNC shield for stepper motor control.</h3>
+            <h3>Our machine had 2 core opeartions:</h3>
+            <h3><ul>
+              <li>XYmovement<li>
+              <li>RGB LEDs</li>
+                <ul>
+                </h3>
+              <h3>We were using one Arduino One to recive all info from the UI and this board will be sending serial data to the other 2. Another board would be carrying the CNC shield, and will be the "motor"
+              board. The last one will be the LED controller.</h3>
+              </td>
+      <td>
 
+      </td>
       </tr>
+
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Considerations before licensing</h2>
-              <h3>It's important to know, that after you realease something with a particular license, that license is now bounded to that particular item, even if you stop distribution. You need to consider that someone that use your project with a license
-              bounded to it, may rely to that license for future events.</h3>
-              <h3>The Creative Commons website list some considerations on their <a href = "https://wiki.creativecommons.org/wiki/Considerations_for_licensors_and_licensees#Considerations_for_licensors">"Considerations before licensing"</a>
-                for licensors and for licensee, so taking note of what license you are going to use its very important because you cant revoke if you already make a distribution. </h3>
-                <h3> <!--Blanck space for separation--></h3>
+          <img src="Imagenes\week14\w14_program_design.jpg" width="300px" height="400px">
         </td>
         <td>
-          <img src="Imagenes\week16\w16_consideration.jpg" width="250px" height="250px">
-        </td>
+          <h2>Program.</h2>
+            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
+              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
+              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
+            </td>
       </tr>
-
       <!--Fila3-->
       <tr>
         <td>
-          <img src="Imagenes\week16\w16_layers.jpg" width="360px" height="404px">
-          <h3> <!--Blanck space for separation--></h3>
-          <img src="Imagenes\week16\w16_tool.jpg" width="555px" height="195px">
-          <h3> <!--Blanck space for separation--></h3>
-          <img src="Imagenes\week16\w16_license.jpg" width="490px" height="322px">
-          <h3> <!--Blanck space for separation--></h3>
+          <h2>Test</h2>
+            <h3>This are videos of our tests. Free motor movement and how LED works within each pin.</h3>
+            </td>
+            <td>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/TUjKpq7FrAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/n3RboYKq-RQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </td>
+      </tr>
+      <!--Fila4-->
+      <tr>
+        <td>
+          <img src="Imagenes\week14\w14_current_limiting1.jpg" width="300px" height="400px"><img src="Imagenes\week14\w14_current_limiting2.jpg" width="300px" height="400px">
+        </td>
+
+          <td>
+          <h2>Driver Tuning</h2>
+            <h3>We are using a CNC shield with 4 motor drivers from Texas Instruments (DRV8825). Those drivers need to set for each stepper motor. Each unit controls current passing to the steeper,
+            if the driver let to much current (driver > rated value motor) might damage the stepper.</h3>
+            <h3>For this type of driver, there is a formula using reference voltage. For a tutorial for current limiting <a href="https://www.pololu.com/product/2133">pololu webpage<a> details how to.</h3>
+            </td>
+      </tr>
+      <!--Fila5-->
+      <tr>
+        <td>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
         </td>
         <td>
-            <h2>License</h2>
-              <h3>I choose to use the Creative Common license. I made that choice because of their benefits: "All Creative Commons licenses have many important features in common. Every license helps creators — we call them licensors if they use our tools —
-                retain copyright while allowing others to copy, distribute, and make some uses of their work — at least non-commercially I would like to share my work to many other studens from the Fabacademy or people that would like to improve my work with total freedom."
-              More can be learned in their page <a href="/creativecommons.org/licenses">"creativecommons.org/licenses"</a>.</h3>
-              <h3> </h3>
-
-            <h2>Making selection</h2>
-              <h3>From their website I used the <a href ="https://creativecommons.org/choose/">feature choosing tool</a>. After choosing "Yes" in "Allow adaptations of your work to be shared?" and "Yes" in "Allow commercial uses of your work?"
-              the tool selected the Creative Commons Attribution 4.0 International as the picture on the left suggest. </h3>
-              <h3>The license in the pics, its a quick human understandable review. The full document with all legal code is <a href = "https://creativecommons.org/licenses/by-sa/4.0/legalcode">here</a>.</h3>
-
         </td>
-
       </tr>
 
     </table>

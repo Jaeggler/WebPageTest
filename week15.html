@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W15-Wildcard</title>
+  <title>W15-Machine Design</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Do something different from all assignments.</li>
-            <li>Selected: Composites</li>
+            <li>Group - Design a machine (mechanism + actuation + automation), including the end effector, build the passive parts and operate it manually.</li>
+            <li>Personal - Plan and make a machine. Document the group project and your individual contribution.</li>
           </ul>
         </td>
         </tr>
@@ -63,9 +63,8 @@
         <tr>
           <td>
             <ul>
-              <li>Glass fiber</li>
-              <li>Natural fiber</li>
-              <li>Resin</li>
+              <li></li>
+              <li></li>
             </ul>
         </td>
         </tr>
@@ -82,11 +81,10 @@
         <tr>
           <td>
             <ol>
-              <li>Material Datasheet</li>
-              <li>Testing - Coupon</li>
-              <li>Mask design</li>
-              <li>Adding layers</li>
-              <li>Vaccum</li>
+              <li>Design machine</li>
+              <li>Design control</li>
+              <li>Building</li>
+              <li>Test!</li>
             </ol>
         </td>
         </tr>
@@ -99,94 +97,71 @@
   <!--Main-->
   <div class="container-main">
     <table>
-
       <!--Fila1-->
       <tr>
         <td>
-          <img src="Imagenes\week15\w15_testcoupon_flat.jpg" width="306px" height="224px"><img src="Imagenes\week15\w15_testcoupon_round.jpg" width="268px" height="254px">
-          <img src="Imagenes\week15\w15_testcoupon_final.jpg" width="504px" height="378px">
-        </td>
-        <td>
-          <h2>Testing</h2>
-            <h3>First try, glass fiber.</h3>
-            <h3>Made two tests. My first coupon was just adding 2 little patchs of material together with resin (general use resin), and my second test
-            was using a plastic mold to check how material adapts to circular forms.
-            In both cases, first apllied a layer of resin and, when still wet, added one layer of fiber. Repeated the process for next layers. When all layers where together, used a roller for
-            flattening and air bubble release.</h3>
-            After one night, I got both test looking good</h3>
-            <h3>Natural Fiber</h3>
-            <h3>For this work, I used Jute. Bought it from a general cloth store.</h3>
-            <h3>Using a piece of glass as mold, I started to adding layers of natural fiber to it, using same resin. When all layers where added, used a roller to make it flat, make air bubbles
-            to release and push extra resin out.</h3>
-            <h3>Put some weight on top of coupon for make it compact and push more resin out. Left overnight.</h3>
-            <h3>Final result is a succed.</h3>
-            <h3>Comments of glass fiber</h3>
-            <h3>I been working in my house, using gloves, glasses and a overall. Since the beginning, noticed the fiber gets everywhere so its important to do little cleaning for time to time
-            Even wearing mask, security glasses and overall I got material in my troath. I think it happened when took out my mask and some fibers may be floating
-            Working with the fiber isn't hard, but need to be really organized to avoid having fiber all over the place.</h3>
-            </td>
+          <h2>Group Work - Task</h2>
+            <h3>My work in this assignment was to write the first code and tuning motor movement. We decided to use Arduino One boards (3), with a CNC shield for stepper motor control.</h3>
+            <h3>Our machine had 2 core opeartions:</h3>
+            <h3><ul>
+              <li>XYmovement<li>
+              <li>RGB LEDs</li>
+                <ul>
+                </h3>
+              <h3>We were using one Arduino One to recive all info from the UI and this board will be sending serial data to the other 2. Another board would be carrying the CNC shield, and will be the "motor"
+              board. The last one will be the LED controller.</h3>
+              </td>
+      <td>
 
+      </td>
       </tr>
+
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Mask Design</h2>
-            <h3>I wanted to do a mask for this assignment, so I used a balloon and newsprint paper to make the base. </h3>
-            <h3>With a solution of water and glue, applied it on the ballon. Then, added pieces of paper, next a new layer of solution, to make the first layer stick better to the ballon.
-            All other layers were a repetition. 5 layers later, left the ballon to dry with air fromn the window.</h3>
-            <h3>5 layers later, left the ballon to dry.</h3>
-            <h3>Comments</h3>
-            <h3>I think used too much solution. It took 2 days with cold weather to dry completely.</h3>
-            </td>
+          <img src="Imagenes\week15\w15_program_design.jpg" width="300px" height="400px">
         </td>
         <td>
-          <img src="Imagenes\week15\w15_based1.jpg" width="408px" height="306px"><img src="Imagenes\week15\w15_based2.jpg" width="480px" height="270px">
-          <img src="Imagenes\week15\w15_based3.jpg" width="306px" height="306px">
-        </td>
-
+          <h2>Program.</h2>
+            <h3>As said before, Arduino 1 (A1), will be recieving data as a code. M followed with two digits. This part will be read by Arduino with the CNC shield (A2 o AMotor), and will read the
+              two digits following. THe idea behind, is there are going to be "predifined positions", for each pin. So every time A2 reads a position, will send the correct number of steps to the motors.</h3>
+              <h3>Same operation will follow the Arduino 3 (LEDs). The second segment sent by A1, will have and identificator (L) in front and two digits. As motors, there are going to be predifined colors for each digit.</h3>
+            </td>
       </tr>
       <!--Fila3-->
       <tr>
         <td>
-          <img src="Imagenes\week15\w15_compositeapply.jpg" width="306px" height="278px">
-        </td>
-        <td>
-          <h2>Adding composite</h2>
-            <h3>After the ballon dried, cut the fiberglass mat in small pieces for maximum adapt to the baloon shape.
-            Then, after setting my workspace, started to add resin to the mask and the glass fiber.</h3>
-            <h3>Added 2 layers of fiberglass while pressing it with a small roller, then left to dry when all air is out.
-            While drying, cleaned my workspace to avoid other people inhalate the glass fiber.</h3>
-        </td>
+          <h2>Test</h2>
+            <h3>This are videos of our tests. Free motor movement and how LED works within each pin.</h3>
+            </td>
+            <td>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/TUjKpq7FrAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/n3RboYKq-RQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </td>
       </tr>
       <!--Fila4-->
       <tr>
         <td>
-          <h2>Result</h2>
-            <h3>When all dry, the mask is really solid. Even when not using a pressure technique, glass fiber hardens really nice. </h3>
-            <h3>Tried to cut the eyehole when still wet because if left to harden more, would be impossible. So cut one eyehole and left the other one for testing cutting while hard.</h3>
+          <img src="Imagenes\week15\w15_current_limiting1.jpg" width="300px" height="400px"><img src="Imagenes\week15\w15_current_limiting2.jpg" width="300px" height="400px">
+        </td>
 
-            <h3>Final comments</h3>
-            <h3>Could not cut the other eye. Its too hard to let the cutter through.</h3>
-            <h3>Will do another mask with natural fiber. Working with fiberglass in my house feels kind of dangerous to my family. Even
-            cleaning and taking lots of care, some fibers float and keep that way, being dangerous to the kids here.</h3>
+          <td>
+          <h2>Driver Tuning</h2>
+            <h3>We are using a CNC shield with 4 motor drivers from Texas Instruments (DRV8825). Those drivers need to set for each stepper motor. Each unit controls current passing to the steeper,
+            if the driver let to much current (driver > rated value motor) might damage the stepper.</h3>
+            <h3>For this type of driver, there is a formula using reference voltage. For a tutorial for current limiting <a href="https://www.pololu.com/product/2133">pololu webpage<a> details how to.</h3>
+            </td>
+      </tr>
+      <!--Fila5-->
+      <tr>
+        <td>
+          <h2>Files</h2>
+            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
         </td>
         <td>
-          <img src="Imagenes\week15\w15_glass_result.jpg" width="306px" height="322px">
         </td>
-        <!--Fila5-->
-        <tr>
-          <td>
-            <img src="Imagenes\week15\w15_mask_vacumm.jpg" width="378px" height="346px"><img src="Imagenes\week15\w15_natural_result.jpg" width="378px" height="360px">
-          </td>
-          <td>
-            <h2>Extra Try</h2>
-              <h3>I did a second mask, now using natural fiber.
-              Repetead the same steps from glass fiber, but this time I put it on a vaccum bag and left it on the sun.</h3>
-              <h3>Result </h3>
-              <h3>Jute it's too thick to properly get mask shape, resulting a very bulky mask. Good part is, it's safe to machining.</h3>
-              <h3>When using vacumm bag, some resin was left on the mask with very spikey shape. It's important to handle it with gloves.</h3>
-          </td>
-        </tr>
+      </tr>
+
     </table>
   </div>
 

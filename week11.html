@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W11-Output Devices</title>
+  <title>W11-Input Devices</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Measure the power consumption of an output device.</li>
-            <li>Personal - Add an output device to a microcontroller board you've designed and program it to do something.</li>
+            <li>Group - measure the analog levels and digital signals in an input device.</li>
+            <li>Personal - Measure something: add a sensor to a microcontroller board that you have designed and read it.</li>
           </ul>
         </td>
         </tr>
@@ -63,7 +63,7 @@
         <tr>
           <td>
             <ul>
-              <li>Autodesk Eagle - Design Software/li>
+              <li>Autodesk Eagle - Design Software</li>
               <li>Roland Mill - Machine</li>
               <li>Solder - Tool</li>
             </ul>
@@ -82,9 +82,11 @@
         <tr>
           <td>
             <ol>
-              <li>Add an output device</li>
-              <li>Design board</li>
+              <li>Planning circuit</li>
+              <li>Simulation</li>
+              <li>Design</li>
               <li>Milling and soldering</li>
+              <li>Programming</li>
               <li>Testing</li>
             </ol>
         </td>
@@ -104,79 +106,79 @@
           </td>
           <td>
             <h2>Planning circuit</h2>
-              <h3>For this assignment I will use <a href="week10.html">week 10</a> board as a base. Will replace both LEDs and button with a RGB light. Will keep FTDI and 2x2 header for networking assignment.</h3>
+              <h3>For this assignment I will make an attiny45-based board with a button, similar to the 'electronics design' assigment. This board will serve too for networking week, adding a 2x2 header and FTDI connector.
+              Also, will add two red LED to output a program in the board.</h3>
+              <h3>The code will make the board to turn both LEDs at different times when button is pushed.</h3>
               </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
           <h2>Simulation</h2>
-            <h3>Using <a href="week10.html">week 10</a> simulation as base, I replace both LEDs and button with a RGB light</h3>
+            <h3>The difference between this assignment and <a href="week6.html">week 6</a>is we are adding FTDI and 2x2 header, intended for serial comm. Also we are connecting an extra LED
+            to the free PIN.</h3>
             <h3>The bill of materials used here is: (without FTDI and 2x2 headers)</h3>
             <h3>
               <ul>
               <li>Attiny45 x1</li>
               <li>Red LED x1<li>
               <li>1uF Capacitor x1<li>
-              <li>10k Ohm Resistor x1</li>
-              <li>1k Ohm Resistor x2</li>
-              <li>499 Ohm Resistor x1</li>
+              <li>10 kOhm Resistor x2</li>
+              <li>499 Ohm Resistor x2</li>
+              <li>Pushbutton x1</li>
               <ul>
             </h3>
-            <h3>With everything connected, I load a code found at <a href="">here</a> and its a success!.</h3>
-            <h3>Can find the simulation <a href="https://www.tinkercad.com/things/kt2DZlqMVVe">here</a><h3>
+            <h3>With everything connected, we load the code and its a success!.</h3>
+            <h3>Can find the simulation <a href="https://www.tinkercad.com/things/4WSk9Sx6aaV">here</a><h3>
             </td>
         <td>
-          <img src="Imagenes\week11\w11_simulation.png" width="556px" height="273px">
+          <img src="Imagenes\week11\w11_simulation.png" width="482px" height="232px">
           </td>
       </tr>
       <!--Fila3-->
       <tr>
       <td>
-          <img src="Imagenes\week11\w11_schematics.png" width="608px" height="284px"><img src="Imagenes\week11\w11_board_result.png" width="582px" height="375px">
+          <img src="Imagenes\week11\w11_schematic.png" width="734px" height="317px"><img src="Imagenes\week11\w11_board_v2.png" width="459px" height="363px">
         </td>
       <td>
         <h2>Design</h2>
-          <h3>Using <a href="week10.html">week 10</a> schematics as base, I replaced the LEDs and their resistors, the button and it's pullup resistor; with a RBG LED and 3 resistor on each leg.</h3>
-          <h3>Repeat same steps as <a href="week10.html">week 10</a>.</h3>
+          <h3>Create project, schematics and add all components to it. This time, I tried to make less "physical" connections but more labeled ones. Once all is connected, we start board design.</h3>
+          <h3>Similar to <a href="week6.html">week 6</a>, we first arrange components possible position. When ok, start to route. When finished, exported PNG for milling process.</h3>
       </td>
       </tr>
       <!--Fila4-->
       <tr>
         <td>
           <h2>Milling and soldering</h2>
-            <h3>Repeating steps from <a href="week10.html">week 10</a>.</h3>
+            <h3>Steps for this operation are detailed on <a href="week4.html">week 4</a> and <a href="week6.html">week 6</a>.</h3>
             <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.
               Also, due to the use of a broken 1/64 tool, the board had some debri on it. Had to remove with a lime. </h3>
-            <h3>Soldered, loaded a code I grab from <a href="https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/arduino-sketch">here.</a> (little tweek selecting the correct pin number) and tried continuity. Everything was ok</h3>
+            <h3>Soldered, loaded week 6 code (little fix to turn on both LEDs) and tried continuity. Everything was ok</h3>
         </td>
         <td>
-          <img src="Imagenes\week11\w11_milling_result.jpg" width="438px" height="339px"><img src="Imagenes\week11\w11_solder_result.jpg" width="574px" height="354px">
+          <img src="Imagenes\week11\w11_milling_result_detail.jpg" width="417px" height="339px"><img src="Imagenes\week11\w11_soldering_result.jpg" width="466px" height="320px">
         </td>
       </tr>
       <!--Fila5-->
       <tr>
         <td>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/L3AO-oRKkzk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Dl_f0QxOzzE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </td>
         <td>
-          <h2>Testing</h2>
-            <h3>This is the video of how it is working.</h3>
+          <h2>Programming</h2>
+            <h3>Added the program (link at the bottom) and test!. Works!</h3>
         </td>
-      </tr>
-      <!--Fila6-->
-      <tr>
-        <td>
-          <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
-        </td>
-        <td>
-
-        </td>
-      </tr>
+        <!--Fila6-->
+        <tr>
+          <td>
+          </td>
+          <td>
+            <h2>Files</h2>
+              <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+          </td>
 
           </table>
-        </div>
+  </div>
 
   <!--Footer-->
   <div class="container-footer">

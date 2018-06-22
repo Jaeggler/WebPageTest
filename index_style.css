@@ -83,7 +83,7 @@ background-size: cover;
 }
 
 #semana3{
-  background-image: url("Imagenes/logos/w3_logo.jpg");
+  background-image: url("Imagenes/logos/w3_logo.png");
 }
 
 #semana4{
@@ -136,6 +136,22 @@ background-size: cover;
 
 #semana16{
   background-image: url("Imagenes/logos/w16_logo.jpg");
+}
+
+#semana17{
+  background-image: url("Imagenes/logos/w17_logo.jpg");
+}
+
+#semana18{
+  background-image: url("Imagenes/logos/w18_logo.jpg");
+}
+
+#semana19{
+  background-image: url("Imagenes/logos/w19_logo.jpg");
+}
+
+#semana20{
+  background-image: url("Imagenes/logos/w20_logo.jpg");
 }
 
 /*Tarea CLuster*/

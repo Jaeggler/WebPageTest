@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W9-Moulding and Casting</title>
+  <title>W9-Embedded Programming</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them.</li>
-            <li>Personal - Design a 3D mould around the stock and tooling that you'll be using, machine it, and use it to cast parts.</li>
+            <li>Group - Compare the performance and development workflows for other architectures.</li>
+            <li>Personal - Read a microcontroller data sheet. Program your board to do something, with as many different programming languages and programming environments as possible.</li>
           </ul>
         </td>
         </tr>
@@ -63,8 +63,8 @@
         <tr>
           <td>
             <ul>
-              <li>Roland Mill - Machine</li>
-              <li>Autodesk Fusion - Software</li>
+              <li>Arduino IDE - Programming Enviroment</li>
+              <li>Arduino as ISP</li>
             </ul>
         </td>
         </tr>
@@ -81,10 +81,8 @@
         <tr>
           <td>
             <ol>
-              <li>Read resin MSDS</li>
-              <li>3D Mold design</li>
-              <li>Mold machining</li>
-              <li>Casting</li>
+              <li>Read Micro DataSheet</li>
+              <li>Board Programming</li>
             </ol>
         </td>
         </tr>
@@ -98,61 +96,50 @@
   <div class="container-main">
     <table>
 
-
+      <!--Fila1-->
+      <tr>
+        <td>
+          <img src="Imagenes\week8\w8_tiny45_pinout.png" width="458px" height="164px">
+          </td>
+        <td>
+          <h2>Micro Datasheet</h2>
+            <h3>In this assigment I will ve using the Electronics Design week board I did. This is an attiny45 micro from AVR. I found the micro datasheet at this
+               <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet-Summary.pdf">link</a>.</h3>
+            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet" <a href="https://www.sparkfun.com/tutorials/223">(link here)</a>, which summaries the most important
+            stuff when not having experience with electronics.</h3>
+            <h3>According to the guide, I will be looking for: summary, specifications, pinout, absolute ratings, recommended operation conditions and example schematics. </h3>
+            <h3>Attiny 45 it's a 8 pin microcontroller. Taking VCC and GROUND pins, the micro have 6 I/O pins from which usually you dont use the RESET one. The micro have 4K storage, meaning it have
+            really short space. The lighter the code, the better.</h3>
+        </td>
+      </tr>
       <!--Fila2-->
       <tr>
         <td>
-            <h2>Model Design</h2>
-              <h3>For this assignment I will be designing a little mold for chocolate cast. I will be creating a mold for a Mario Bros cube.</h3>
-              <h3>Using autodesk Fusion I will create the mold. On the left is the video for the creation.</h3>
-              <h3></h3>
-              <h3></h3>
+            <h2>Programming</h2>
+              <h3>I will be using the Arduino IDE to check memory difference between Arduino Languaje and C Languaje. I will download a blink code with Arduino and C Languaje to compare main diferences.</h3>
         </td>
         <td>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3oxIajP7gjk" frameborder="0" allowfullscreen></iframe>
+          <img src="Imagenes\week9\w9_arduino_ide.jpg" width="720px" height="405px">
         </td>
 
       </tr>
       <!--Fila3-->
       <tr>
-        <td><img src="Imagenes\week9\w9_milling.jpg" width="300px" height="325px"><img src="Imagenes\week9\w9_milling_result.jpg" width="300px" height="325px"></td>
         <td>
-          <h2>Mold Machinning</h2>
-            <h3>A will be using a Roland machine for milling my mould. I will be using flexible wax. Set all parameters waited. </h3>
-            <h3>Flexibe wax wasn't the best material for this, since can be damage easily, but was the only material available. with extra care still a usefull choice.</h3>
+            <img src="Imagenes\week9\w9_arduino_blink_usage.png" width="230px" height="71px">
+        </td>
+        <td>
+          <h2>Arduino languaje</h2>
+            <h3>Using Arduino IDE I programmed the blink code (files bottom of page). When loaded to the W6 board I can see it uses 22% of the storage. Datasheet details the program memory size is 4KB.</h3>
+            <h3></h3>
+            <h2>C Languaje</h2>
+              <h3>Using Arduino IDE I programmed the blink code with C code (files bottom of page). When loaded to the W6 board I can see it uses only 2% of the storage. Meaning everytime I program something
+            , I'm adding all library to the memory. Bad side of this, its C code it's really unfrindly making it better to situation where you need to improve your storage. For quick works, using Arduino would be better.
             </td>
-
       </tr>
+
+
       <!--Fila4-->
-      <tr>
-        <td>
-          <h2>Mold Cast</h2>
-            <h3>Since it is intended to be a food mould, I selected "food grade" material. It's a bi-component with a mixing ratio of 1:1.</h3>
-            <h3>Used a scaled coup and added 80cc of each material. MIxed for about 5 min.
-              Poured and left near a window to solid. Material data details that will harden faster with heat. Now it's really cold with high humidity, so will leave it overnight to make sure will solid completely.</h3>
-              <h3>After all night, the mold looks great.</h3>
-          </td>
-        <td>
-          <img src="Imagenes\week9\w9_material.png" width="300px" height="325px"><img src="Imagenes\week9\w9_mold_cast.jpg" width="300px" height="325px">
-          <img src="Imagenes\week9\w9_demoulding.jpg" width="300px" height="325px">
-        </td>
-
-      </tr>
-      <!--Fila4-->
-      <tr>
-        <td>
-          <h2>Casting</h2>
-            <h3>And now we have the mold ready to use with the design we choose.</h3>
-            <h3>First, we prepare the chocolate by melting it. Then, we pour it into the mold beeing carefull to fullfil every space of the mold. And we take it to the fridge.
-              We leave it there approximately 30 minutes. And finally we take it out and have a great chocolate to enjoy!</h3>
-          </td>
-        <td>
-          <img src="Imagenes\week9\w9_pouring.jpg" width="300px" height="325px">
-          <img src="Imagenes\week9\w9_result.jpg" width="300px" height="325px">
-        </td>
-
-      </tr>
-      <!--Fila5-->
       <tr>
         <td>
           <h2>Files</h2>
@@ -160,7 +147,6 @@
         </td>
         <td>
         </td>
-
       </tr>
     </table>
   </div>

@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W6-Electronics Design</title>
+  <title>W6-3D Print and Scan</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,8 +45,9 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Use the test equipment in your lab to observe the operation of a microcontroller circuit board.</li>
-            <li>Personal - Redraw the echo hello-world board, add (at least) a button and LED (with current-limiting resistor), check the design rules, make it, test it.</li>
+            <li>Group - Test the design rules for your printer(s).</li>
+            <li>Personal - Design and 3D print an object (small, few cm) that could not be made subtractively.</li>
+            <li>Personal - 3D scan an object (and optionally print it).</li>
           </ul>
         </td>
         </tr>
@@ -63,9 +64,8 @@
         <tr>
           <td>
             <ul>
-              <li>TinkerCAD - Simulation website</li>
-              <li>Eagle - Design Software</li>
-              <li>Roland mill - Machine</li>
+              <li>Stratasys Objet - 3D Printer</li>
+              <li>Autodesk Fusion - Software</li>
             </ul>
         </td>
         </tr>
@@ -82,11 +82,8 @@
         <tr>
           <td>
             <ol>
-              <li>Understand the circuit</li>
-              <li>Simulation</li>
-              <li>Use electronics design software</li>
-              <li>Re-draw Echo-Hello World</li>
-              <li>Milling and soldering</li>
+              <li>3D Scan</li>
+              <li>3D Print</li>
             </ol>
         </td>
         </tr>
@@ -99,136 +96,67 @@
   <!--Main-->
   <div class="container-main">
     <table>
+
       <!--Fila1-->
       <tr>
-        <td>
-          <h2>Understanding the circuit</h2>
-            <h3>The "Hello World" circuit is based on a atTiny44 microcontroller which is programmed to print (echo) a given input in serial monitor. It have a 20MHz crystal,
-              FTDI and SPI terminals for serial comm and a 10K resistor and capacitor for micro safety. </h3>
-            <h3>We need to add a button to the circuit which will turn on/off a LED. This button will be on one of the free I/O pins of the micro and the LED will be on other of the free I/O. </h3>
+        <td><img src="Imagenes\week6\w6_spheres.jpg" width="300px" height="300px"><img src="Imagenes\week6\w6_resinsphere.jpg" width="330px" height="250px">
+            <img src="Imagenes\week6\w6_resinmeasure.jpg" width="300px" height="300px"><img src="Imagenes\week6\w6_filamentmeasure.jpg" width="300px" height="300px">
+          <img src="Imagenes\week6\w6_filament_finish.jpg" width="304px" height="540px"></td>
 
+        <td>
+           <h2>Groupwork</h2>
+              <h3>In this workgroup we printed different diameter spheres, both in resin and filament. We were looking for difference in finishing, weight, strenght, accuracy and support creation.
+              We used a Stratasys Objet 30 and Makerbot printer for resin (Vero Grey Material) and filament (Red ABS filament). Here are the results:</h3>
+              <h3>
+                <h3>Finishing: Resin materials are really beatifull. The Objet30 prints thickness down to 26µ, allowing to have smooth organic surface. On the other hand, filament material
+                is not the best option for complex surface having rought surface and a stair-like form (Figure 5).</h3>
+
+                <h3>Weight: Here filament is the best. The Objet 30 printer doesn't allow to create inner structures (like filament does) to reduce material consumption but a solid piece,
+                   this makes this kind of technology really expensive. Even if we design the piece to have an inner structure to save some material, this "hole" would be filled with support material,
+                 in this case, a gel-like material.</h3>
+
+                 <h3>Strenght: Resin materials like Vero, are very fragile. They are hard enought for low stress application, but will break if hit the floor for example. In this case, ABS material is
+                   better suited due its mechanical properties.</h3>
+
+                   <h3>Accuracy: Usually, this topic is more related to the printer rather than the material. The Objet printer is much more accurate than the Makerbot, but for small pieces its not a big
+                   issue.</h3>
+
+                   <h3>Support: In Makerbots printers, the building filament serves as support material. The printer usually will decide to put supports where there is a "roof" or a wall have less than 45
+                   degrees (measuring from the floor). In some cases (like this one), support material is no necessary because each layer of filament can support the next one. For resin things are different,
+                 the printer will put support everywhere there is a hole between the material and the floor or other material; in other words there will be material in every angled wall and/or "roof".</h3>
+
+              </h3>
             </td>
-        <td><img src="Imagenes\week6\w6_echo_world.jpg" width="460px" height="435px">
+
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-          <img src="Imagenes\week6\w6_simulation.jpg" width="692px" height="316px"></td>
-        <td>
-            <h2>Simulation</h2>
-              <h3>Using the TinkerCAD electronics simulator (TinkerCAD.com), I'm going to try to reproduce the circuit. Due this is a very basic -but free- simulator it doesn't have all components
-              , but do have all main components -name attiny45- which is all we need for this week. </h3>
-              <h3>From the side menu, grab all components to use: breadboard, attiny45 micro, resistor, capacitor, button and LED. This video shows how I connect them.</h3>
-              <h3>Finally I load the program to the micro and test results. It works!</h3>
-              <h3>What's different using atTiny45 from the original atTiny44? None. Should work the same way. The only difference for this proyect is pin availability. atTiny44 have 6 more pins (14)
-              than tiny45, but for this proyect its enough.</h3>
-        </td>
-      </tr>
-      <!--Fila3-->
-      <tr>
-        <td>
-          <h2>Design Software - Using Eagle</h2>
-            <h3>For the PCB design, I will be using Eagle, from Autodesk. For how to install and setup Eagle, I used sparkfun guide: <a href="https://learn.sparkfun.com/tutorials/how-to-install-and-setup-eagle">How to install and setp Eagle</a>.
-            It's a very simple guide for programm installation, library setup (library I donwloaded from <a href="https://github.com/Academany/FabAcademany-Resources/blob/master/SUMMARY.md">here</a>) and other settings. </h3>
-            <h3>Operation for Eagle is really easy, big steps are: </h3>
-            <h3><ul>
-              <li>Creating Proyect: This will be our "Project file".</li>
-              <li>Creating schematics file: Where we connect our componets.</li>
-              <li>Adding components to the schematics.</li>
-              <li>Creating PCB: This will arrange components and create routes.</li>
-              <li>Fix errors, improvements and changes.</li>
-              <li>Export: exporting png files for PCB milling.</li>
-            </ul></h3>
-            <h3>All steps are described in these <a href="https://learn.sparkfun.com/tutorials/using-eagle-schematic">schematic</a> and <a href="https://learn.sparkfun.com/tutorials/using-eagle-board-layout">boards</a> tutorias.
-            I will be detailing all things specific for my assignment.</h3>
-            </td>
-        <td><img src="Imagenes\week6\w6_eagle_image.png" width="505px" height="393px"></td>
-      </tr>
-      <!--Fila4-->
-      <tr>
-        <td>
-          <img src="Imagenes\week6\w6_sch_v1.jpg" width="743px" height="275px">v1<img src="Imagenes\week6\w6_sch_v2.jpg" width="743px" height="275px">v2
-          <img src="Imagenes\week6\w6_pcb_arrenge.jpg" width="323px" height="291px"><img src="Imagenes\week6\w6_final_pcb_v2.jpg" width="375px" height="305px">
-          <img src="Imagenes\week6\w6_export_board.png" width="428px" height="334px">
-        </td>
-        <td>
-            <h2>Re-draw board</h2>
-              <h3>The first big change I'm doing is replace attiny44 with a 45 unit. This because I'm not adding the 20M crystal and FTDI header(used for serial comm), releasing 4 pins in total (44 has 6 more I/O than 45).
-              I have to add a LED and button, so the final component list is:</h3>
-              <h3><ul>
-                <li>Attiny45 unit</li>
-                <li>3x2 ISCP header</li>
-                <li>10k(2) and 200(1) ohm resistors</li>
-                <li>Capacitor 100uF</li>
-                <li>Button</li>
-                <li>Surface mount LED</li>
-              </ul></h3>
-              <h3>Added components to schematic file. Made a first try, but seems too ugly, so decided to take 3x2 header out amd connect with labels. It doesn't matter if it is connected this way, the programm
-            identify when you are connect similar labels. Once all components are connected, we switch to board layout.</h3>
-              <h3>Here, every component appears packed. Using the move command, I re-arrenged the components trying to identify the final distribution. Once I have some idea where is the final place of each component,
-              make board delimitation. Trying to make everything smaller is preffered, it reduce milling time and material, making everything cheaper.</h3>
-              <h3>Using this first iteration, tried routing components. Eagle have it's own autorouting feature, but for this job wanted to do by myself. Ro<h3>
-              <h3>Routing it's not one way task, most of the time you are making iteration to achieve the best results. If a connection is wrong or is missing, you have to go back to the schematics and fix it.</h3>
-              <h3>Finally when all routes are in place, its time to export to a PNG graphic. Here we have a Modela CNC with Fab Module. Export only the top layer without colors (Monochrome)
-                and good resolution (1000 DPI aprox).</h3>
-        </td>
-      </tr>
+          <h2>3DPrint</h2>
+            <h3>In this week, I'm going to print one wheel for my final project (you can check it <a href="finalp.html">here</a>). I want to explore different ideas for every component of my RC car, and
+              wheels is one thing really want to be different. I went to thingiverse and looked several ideas for RC car wheels and choose one that looks simple but interesting. After download it,
+              check it using 3D builder (a pre-installed STL viewer on Win10) and confirmed it have a desired dimensions. Load it to my printer and started. Click <a href="Files\week5\spiralwheel.stl" download>here</a> for download.</h3>
+            <h3>For this assignment I'm using a 3DSystems Gen 2 Cube printer with PLA material. This printer allows me to select between PLA and ABS materials and also to add raft and support. Also allows to
+              select 3 different infills for your project. Selected raft creation and "almost solid" infill. After 1 hour and a half, I had my print </h3>
+            <h3>Comments</h3>
+            <h3>It was a easy piece. Most of it is self supported, which makes easier for clean (only need to take off the raft). Due to it simple form, filament was perfect for the job.</h3>
+            <h3>The print measure marked 70.8 mm, that means a 0.01% error of its desing value.</h3>
 
-      <!--Fila5-->
-      <tr>
-        <td>
-            <h2>Milling</h2>
-              <h3>I will be using Fab Modules for the milling process. For this, I will be feeding the programm with my PNG file, exported from Eagle. </h3>
-              <h3>To load the program (Linux), have to Open "Terminal", type "sudo Fab" and enter the password. That will start the modules, from which select the process and the machine (milling and modela MDX).
-              Once the program loaded, I can upload my file and set the parameters for milling.</h3>
-              <h3>Due to problem with the tool, I will have to mill the board in the phases. </h3>
-              <h3>Parameters for the milling process are in picture.  </h3>
-              <h3>After setting all parameters, first run will cut through the board 0.08" deep. This will be repeated 2-3 times depending how quality the job is. NOTE: This is only because we have a broken tool.<h3>
-              <h3>After 3 times, the board is ready, but need to be cut. Using the heat gun to make the board "soft", proceed to cut using the guillotine.  </h3>
-              <h3>Now the board is ready for soldering it's components.</h3>
-        </td>
-        <td>
-          <img src="Imagenes\week6\w6_milling_data.jpg" width="504px" height="378px"><img src="Imagenes\week6\w6_milling_result.jpg" width="402px" height="368px"></td>
-      </tr>
-      <!--Fila6-->
-      <tr>
-        <td><img src="Imagenes\week6\w6_soldering_result.jpg" width="320px" height="264px"></td>
-        <td>
-          <h2>Soldering</h2>
-            <h3>Grab all components and solder!</h3>
-            <h3>This is how it looks after soldering it's componets.</h3>
-            <h3></h3>
             </td>
-      </tr>
-      <!--Fila7-->
-      <tr>
-        <td>
-            <h2>Programming and test</h2>
-            <h3>One thing I was noticed, is FabISP and AVRISP programmer do not supply 5v to the board, should be powered from outside! That was unexpected, since I removed FTDI connector. So decided to
-            solder two cables to the board (Vcc and GND) to be powered.</h3>
-              <h3>Before programming, a need change the input pin number in the new code. Simulation uses PB5 for button imput but the new board would be using PB3. Only making change on
-              "buttonpin" variable will solve the problem.</h3>
-              <h3>For this assingment I used an Arduino One as an ISP programmer. This <a href="https://www.youtube.com/watch?v=8SOUgyHXVG0">video</a> shows how to setup your Arduino One as a programmer.</h3>
-              <h3>I connected everything as shown in the video, and one thing I learnt is the arduino can be an ISP and CAN supply 5v to the board, so my first "fix" was unnecesary.</h3>
-              <h3>Now I will copy the code from Tinkercad to Arduino IDE. For the Arduino to send info to the attiny, first we need to load the attiny library. Here is a
-              <a href="https://create.arduino.cc/projecthub/arjun/programming-attiny85-with-arduino-uno-afb829">tutorial</a> how to add attiny library to Arduino IDE. </h3>
-              <h3>With everything connected, loaded the program from Tinkercad (files at the bottom) to Arduino IDE, and program show "Done uploading", a confirmation of success.</h3>
-              <h3>Disconected all but VCC and ground an test (LED should turn on when button press).</h3>
-              <h3>Succed!</h3>
-            </td>
-        <td>
-          <img src="Imagenes\week6\w6_fixing.jpg" width="264px" height="210px"><img src="Imagenes\week6\w6_pinout.png" width="600" height="268px">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/dOPnPUfhEAI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </td>
+        <td><img src="Imagenes\week6\w6_printing.jpg" width="350px" height="240px"><img src="Imagenes\week6\w6_printend.jpg" width="350px" height="240px">
+            <img src="Imagenes\week6\w6_print.jpg" width="350px" height="240px"><img src="Imagenes\week6\w6_printpush.jpg" width="350px" height="240px">
+            <img src="Imagenes\week6\w6_printmeasure.jpg" width="350px" height="240px"></td>
       </tr>
       <!--Fila6-->
       <tr>
         <td>
+
         </td>
         <td>
           <h2>Files</h2>
             <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
         </td>
+      </tr>
     </table>
   </div>
 

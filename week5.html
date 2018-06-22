@@ -3,7 +3,7 @@
 
 <!--GENERAL HEAD CLUSTER-->
 <head>
-  <title>W5-3D Print and Scan</title>
+  <title>W4-Electronics Production</title>
 
   <link href="reset.css" type="text/css" rel="stylesheet">
   <link href="grid-week.css" type="text/css" rel="stylesheet">
@@ -45,9 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Test the design rules for your printer(s).</li>
-            <li>Personal - Design and 3D print an object (small, few cm) that could not be made subtractively.</li>
-            <li>Personal - 3D scan an object (and optionally print it).</li>
+            <li>Group - Characterize the specifications of your PCB production process.</li>
+            <li>Personal - Make an in-circuit programmer by milling the PCB, then optionally, trying other processes.</li>
           </ul>
         </td>
         </tr>
@@ -64,8 +63,9 @@
         <tr>
           <td>
             <ul>
-              <li>Stratasys Objet - 3D Printer</li>
-              <li>Autodesk Fusion - Software</li>
+              <li>Roland mill - Machine</li>
+              <li>Solder - Tool</li>
+              <li>AVR ISP - Electronics burner </li>
             </ul>
         </td>
         </tr>
@@ -82,8 +82,11 @@
         <tr>
           <td>
             <ol>
-              <li>3D Scan</li>
-              <li>3D Print</li>
+              <li>Programmer design</li>
+              <li>PCB milling</li>
+              <li>Soldering</li>
+              <li>Programming</li>
+              <li>Test!</li>
             </ol>
         </td>
         </tr>
@@ -99,64 +102,68 @@
 
       <!--Fila1-->
       <tr>
-        <td><img src="Imagenes\week5\w5_spheres.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_resinsphere.jpg" width="330px" height="250px">
-            <img src="Imagenes\week5\w5_resinmeasure.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_filamentmeasure.jpg" width="300px" height="300px">
-          <img src="Imagenes\week5\w5_filamentfinish.jpg" width="304px" height="540px"></td>
+        <td><img src="Imagenes\week5\w5_45traces.png" width="570px" height="200px"></td>
 
         <td>
-           <h2>Groupwork</h2>
-              <h3>In this workgroup we printed different diameter spheres, both in resin and filament. We were looking for difference in finishing, weight, strenght, accuracy and support creation.
-              We used a Stratasys Objet 30 and Makerbot printer for resin (Vero Grey Material) and filament (Red ABS filament). Here are the results:</h3>
-              <h3>
-                <h3>Finishing: Resin materials are really beatifull. The Objet30 prints thickness down to 26µ, allowing to have smooth organic surface. On the other hand, filament material
-                is not the best option for complex surface having rought surface and a stair-like form (Figure 5).</h3>
+           <h2>Design</h2>
+              <h3>In this week assignment we have to solder our own FabISP. We are using pre-designed files and following the FabISP guide on the FabAcademy Archive.
+              This version is Brian's FabISP model, using a ATtiny45 chip.</h3>
 
-                <h3>Weight: Here filament is the best. The Objet 30 printer doesn't allow to create inner structures (like filament does) to reduce material consumption but a solid piece,
-                   this makes this kind of technology really expensive. Even if we design the piece to have an inner structure to save some material, this "hole" would be filled with support material,
-                 in this case, a gel-like material.</h3>
-
-                 <h3>Strenght: Resin materials like Vero, are very fragile. They are hard enought for low stress application, but will break if hit the floor for example. In this case, ABS material is
-                   better suited due its mechanical properties.</h3>
-
-                   <h3>Accuracy: Usually, this topic is more related to the printer rather than the material. The Objet printer is much more accurate than the Makerbot, but for small pieces its not a big
-                   issue.</h3>
-
-                   <h3>Support: In Makerbots printers, the building filament serves as support material. The printer usually will decide to put supports where there is a "roof" or a wall have less than 45
-                   degrees (measuring from the floor). In some cases (like this one), support material is no necessary because each layer of filament can support the next one. For resin things are different,
-                 the printer will put support everywhere there is a hole between the material and the floor or other material; in other words there will be material in every angled wall and/or "roof".</h3>
-
-              </h3>
+           <h3>Comments</h3>
+            <h3>This assigment was difficult for me because I don´t have much electronics background. Took me some time to understand why we were using Brian's model and no other. Also
+            some people decided to modify their model making hard to me deciding. Some hours later took my decision and start to mill the PCB folliwing Brian's model guide.</h3>
             </td>
 
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-          <h2>3DPrint</h2>
-            <h3>In this week, I'm going to print one wheel for my final project (you can check it <a href="finalp.html">here</a>). I want to explore different ideas for every component of my RC car, and
-              wheels is one thing really want to be different. I went to thingiverse and looked several ideas for RC car wheels and choose one that looks simple but interesting. After download it,
-              check it using 3D builder (a pre-installed STL viewer on Win10) and confirmed it have a desired dimensions. Load it to my printer and started. Click <a href="Files\week5\spiralwheel.stl" download>here</a> for download.</h3>
-            <h3>For this assignment I'm using a 3DSystems Gen 2 Cube printer with PLA material. This printer allows me to select between PLA and ABS materials and also to add raft and support. Also allows to
-              select 3 different infills for your project. Selected raft creation and "almost solid" infill. After 1 hour and a half, I had my print </h3>
+          <h2>PCB milling</h2>
+            <h3>Milling</h3>
+            <h3>Beacuse we already have the milling traces, al we have to learn was to use the machine. In our FabLab we have a Modela mill connected to a Ubuntu PC. Learned how to load and send
+            the trace file to the modela. Also learnead how to set the machine to start milling. </h3>
+
+            <h3>Cutting</h3>
+            <h3>I could only have the traces milled but could not cut the shape with the mill, that why had to cut it with a tool. I was taught that have to heat the board before cut it, because
+            it could break and damage the traces. After some hot air, I had my board ready to soldering </h3>
+
             <h3>Comments</h3>
-            <h3>It was a easy piece. Most of it is self supported, which makes easier for clean (only need to take off the raft). Due to it simple form, filament was perfect for the job.</h3>
-            <h3>The print measure marked 70.8 mm, that means a 0.01% error of its desing value.</h3>
+            <h3>
+              A simple task sending files, using known parameters, there is no problems any person can work with the software but it is important to try several times how to set the machine origin
+              ir order to avoid any tool break.
+             </h3>
+             <h3>
+               The hardest part of this assignment for me was cutting the board. I had to mill 3 times before having my final board, first because breaked the board with the cutting tool, and second
+               due bad board fixation. And when finally had my final board, almost break it again. Think I would have to train harder with the cutting tool.
+              </h3>
+            </td>
+        <td><img src="Imagenes\week5\w5_cutting3.jpg" width="300px" height="300px"></td>
+      </tr>
+      <!--Fila3-->
+      <tr>
+        <td><img src="Imagenes\week5\w5_soldtest.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_soldering.jpg" width="300px" height="300px"></td>
+        <td>
+          <h2>Soldering</h2>
+          <h3>First thing: Soldering training. I had to no experience with soldering electronics so stated to solder some broken componentes to one of my discarded boards. After some training
+          , started with my final board. Brian's guide detailed every component I had to use, so I could find everything for my self. Finally after an hour I had my board ready</h3>
+
+          <h3>Comments</h3>
+          <h3>I took a couple of hours to find the appropriate soldering technique. It is something you need to try for your self and can't be read in a book. </h3>
 
             </td>
-        <td><img src="Imagenes\week5\w5_printing.jpg" width="350px" height="240px"><img src="Imagenes\week5\w5_printend.jpg" width="350px" height="240px">
-            <img src="Imagenes\week5\w5_print.jpg" width="350px" height="240px"><img src="Imagenes\week5\w5_printpush.jpg" width="350px" height="240px">
-            <img src="Imagenes\week5\w5_printmeasure.jpg" width="350px" height="240px"></td>
       </tr>
-      <!--Fila6-->
+      <!--Fila4-->
       <tr>
         <td>
+          <h2>Testing</h2>
+          <h3>Connected my FabISP to a AVR ISP and it recognized (two green lights).</h3>
 
-        </td>
-        <td>
-          <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
-        </td>
+          <h3>Comments</h3>
+          <h3>It took a while to the ISP to recognize it. I have to add some ducktape to the board in order to make it close-fit. After some tries I saw the light!</h3>
+    </td>
+        <td><img src="Imagenes\week5\w5_final.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_testing.jpg" width="300px" height="300px"></td>
       </tr>
+
     </table>
   </div>
 
