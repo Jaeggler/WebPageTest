@@ -45,8 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Characterize the specifications of your PCB production process.</li>
-            <li>Personal - Make an in-circuit programmer by milling the PCB, then optionally, trying other processes.</li>
+            <!--<li>Group - Characterize the specifications of your PCB production process.</li>-->
+            <li>Make an in-circuit programmer by milling the PCB, then optionally, trying other processes.</li>
           </ul>
         </td>
         </tr>
@@ -105,63 +105,98 @@
         <td><img src="Imagenes\week5\w5_45traces.png" width="570px" height="200px"></td>
 
         <td>
-           <h2>Design</h2>
-              <h3>In this week assignment we have to solder our own FabISP. We are using pre-designed files and following the FabISP guide on the FabAcademy Archive.
-              This version is Brian's FabISP model, using a ATtiny45 chip.</h3>
-
-           <h3>Comments</h3>
-            <h3>This assigment was difficult for me because I don´t have much electronics background. Took me some time to understand why we were using Brian's model and no other. Also
-            some people decided to modify their model making hard to me deciding. Some hours later took my decision and start to mill the PCB folliwing Brian's model guide.</h3>
-            </td>
+          <h2>Design</h2>
+            <h3>In this week assignment we have to solder our own FabISP. We are using pre-designed files and following the FabISP guide on the FabAcademy Archive.
+                This version is Brian's FabISP model, using a ATtiny45 chip.</h3>
+            <h3>As a personal note, this assigment was difficult for me because I don´t have much electronics background. Decide to use Brian's model because of the Tiny45 and easy to complete.
+                Following <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's model</a> guide I could finish my programmer.</h3>
+            <h3></h3>
+          <h2>Roland MDX-20</h2>
+            <h3>Tecsup have this model for PCB production. Specs for this CNC can be found in <a href="https://www.nasa.gov/sites/default/files/files/DesktopMillTutorial.pdf">this</a>
+            NASA paper about the machine. Also manufacturer's User guide can be downloaded
+            <a href="http://support.rolanddga.com/docs/Documents/departments/Technical%20Services/Manuals%20and%20Guides/MDX-20-15_USE_ENGLISH_R5.pdf">here</a>.</h3>
+            <h3></h3>
+          <h2>FabModules</h2>
+            <h3>MIT client software for machine using. I need to load a PNG file (exported from Eagle or the FabModule), and the sofware will create all traces and set correct width.</h3>
+        </td>
 
       </tr>
+
       <!--Fila2-->
       <tr>
         <td>
-          <h2>PCB milling</h2>
-            <h3>Milling</h3>
-            <h3>Beacuse we already have the milling traces, al we have to learn was to use the machine. In our FabLab we have a Modela mill connected to a Ubuntu PC. Learned how to load and send
-            the trace file to the modela. Also learnead how to set the machine to start milling. </h3>
+          <h2>Setting up</h2>
+            <h3>First we need to download the PNG file from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_mini_traces.png">Brian's model guide</a>.</h3>
+            <h3>Next we need to load the FabModule. To load the program (Linux), have to Open "Terminal", type "sudo Fab" and enter the password. That will start the modules,
+                from which select the process and the machine (milling and modela MDX). Once the program loads, we select the machine we are using, (Modela MDX-20) and then click
+                on make_png_rml. Once the next window pop up, load the board PNG file and set our tool diameter.</h3>
+            <h3>The FabModule allows to create the milling path (auto), trace width and speed. For my job I will set the machine to mill traces about 1/64" diamater, 3 mm/s speed and -0.08 z-axis
+                depth. Finally we create the .rml file but before we need to place the toll on origin.</h3>
+            <h3></h3>
+          <h2>Origin</h2>
+            <h3>For origin setting, we place our substrate on the printer with double sided tape. Then change the "Xmin" and "Ymin" parameter to find physical 0 point. When defined, the tool is
+            lowed to check correct tool penetration. Finally we send the job and CNC starts to work.</h3>
+            <h3></h3>
 
-            <h3>Cutting</h3>
-            <h3>I could only have the traces milled but could not cut the shape with the mill, that why had to cut it with a tool. I was taught that have to heat the board before cut it, because
-            it could break and damage the traces. After some hot air, I had my board ready to soldering </h3>
+        </td>
+        <td><img src="Imagenes\week5\w5_fabmodule.png" width="567px" height="372px"></td>
+      </tr>
 
-            <h3>Comments</h3>
-            <h3>
-              A simple task sending files, using known parameters, there is no problems any person can work with the software but it is important to try several times how to set the machine origin
-              ir order to avoid any tool break.
-             </h3>
-             <h3>
-               The hardest part of this assignment for me was cutting the board. I had to mill 3 times before having my final board, first because breaked the board with the cutting tool, and second
-               due bad board fixation. And when finally had my final board, almost break it again. Think I would have to train harder with the cutting tool.
-              </h3>
-            </td>
+      <!--Fila3-->
+      <tr>
         <td><img src="Imagenes\week5\w5_cutting3.jpg" width="300px" height="300px"></td>
+        <td>
+          <h2>PCB milling</h2>
+            <h3>Once the machine is working it is important to keep cheking periodically if it is doing right. Some problems that might occur are: tool breaking and substrate shifting.
+                If something like that happens, the job has to sent again.</h3>
+            <h3></h3>
+          <h2>Cutting</h2>
+            <h3>When milling process has concluded, we have to trim the extra material in the board using a guillotine. It is important to pre heat the board with a heat gun to make the cutting
+                easeier. After that, a little sanding to avoid splinters and voila!, the PCB is ready for soldering.</h3>
+            <h3></h3>
+            </td>
       </tr>
       <!--Fila3-->
       <tr>
-        <td><img src="Imagenes\week5\w5_soldtest.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_soldering.jpg" width="300px" height="300px"></td>
+
         <td>
           <h2>Soldering</h2>
-          <h3>First thing: Soldering training. I had to no experience with soldering electronics so stated to solder some broken componentes to one of my discarded boards. After some training
-          , started with my final board. Brian's guide detailed every component I had to use, so I could find everything for my self. Finally after an hour I had my board ready</h3>
+            <h3>First thing: Soldering training. I had to no experience with soldering electronics before, so started to solder some broken componentes to one of my discarded boards.
+                Some tests later, started with my final board. Brian's guide detailed every component I had to use, so I could find everything for my self in the shelf.
+                Finally after an hour I had my board ready.</h3>
+            <h3></h3>
+          <h2>Comments</h2>
+            <h3>I took a couple of hours to find the appropriate soldering technique. It is something you need to try for your self and can't be read in a book.</h3>
+            <h3>It is important to check the work at least twice. Make sure the components are in the correct place and check for shorts with multimeter.</h3>
 
-          <h3>Comments</h3>
-          <h3>I took a couple of hours to find the appropriate soldering technique. It is something you need to try for your self and can't be read in a book. </h3>
+        </td>
+        <td><img src="Imagenes\week5\w5_soldtest.jpg" width="300px" height="300px">
+          <img src="Imagenes\week5\w5_soldering.jpg" width="300px" height="300px"></td>
+      </tr>
+      <!--Fila3-->
+      <tr>
+        <td>
+          <img src="Imagenes\week5\w5_final.jpg" width="300px" height="300px">
+          <img src="Imagenes\week5\w5_testing.jpg" width="300px" height="300px">
+        </td>
+        <td>
+          <h2>Programming</h2>
+            <h3>First thing is to download the firmware source code and extract the zip file. Find the code directory and run make, this will make the hex file that will be on the Tiny45.</h3>
+            <h3>Next, we modify the programmer variable on the Makefile. I will be using a AVR programmer, so "avrisp2" is set on the variable.</h3>
+            <h3>Now we plug the programmer to PC and connect the board to the programmer. Run "make flash" to programm the board. Several bars are shown on the screen and if everything is correct
+            a green light should be display.</h3>
+            <h3></h3>
+        </td>
 
-            </td>
       </tr>
       <!--Fila4-->
       <tr>
         <td>
           <h2>Testing</h2>
-          <h3>Connected my FabISP to a AVR ISP and it recognized (two green lights).</h3>
-
-          <h3>Comments</h3>
-          <h3>It took a while to the ISP to recognize it. I have to add some ducktape to the board in order to make it close-fit. After some tries I saw the light!</h3>
-    </td>
-        <td><img src="Imagenes\week5\w5_final.jpg" width="300px" height="300px"><img src="Imagenes\week5\w5_testing.jpg" width="300px" height="300px"></td>
+            <h3>Connected my FabISP to my computer and it recognizes!</h3>
+            <h3></h3>
+        </td>
+        <td><img src="Imagenes\week5\w5_usbtiny_recon.png" width="218px" height="213px">
       </tr>
 
     </table>

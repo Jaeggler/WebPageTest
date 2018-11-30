@@ -61,6 +61,7 @@
           <td>
             <ul>
               <li>Autodesk Fusion</li>
+              <li>Affinity Designer</li>
             </ul>
         </td>
         </tr>
@@ -77,8 +78,8 @@
         <tr>
           <td>
             <ol>
-              <li>Select a 3D CAD software</li>
-              <li>3D Design procedure</li>
+              <li>Design something with CAD tools</li>
+              <li>3D Print model</li>
             </ol>
         </td>
         </tr>
@@ -94,49 +95,81 @@
       <!--Fila1-->
       <tr>
         <td>
-          <h2>2D/3D software selection</h2>
-            <h3>I have worked with Autodeks Inventor for a long time due my job. I used to work in a Mechanical Desing area so I'm used to do pieces and assemblies with 3D software.
-               Also I had to work with Autodesk AutoCAD in some cases when other collaborators need info in DWG format. In both cases, those are very powerful tools, but Autodesk Inventor is stronger than AutoCAD
-               thanks to the ability to assembly pieces and make object oriented drawings.</h3>
-
-              <h3>Other software that I tried were Solidworks, Autodesk Alias, Rinoceros, 123D, etc. I will not used them during this week
-               because I'm thinking in a parametric design and some of those tools are better suited for freeform work. Some good for piece design but lack assembly features (except for Solidworks which is a powefull 3D software, being Inventor long-last rival).
-               </h3>
-
-               <h3>For this assignment, I will be selecting Autodesk Fusion. My selection is based in 2 things: Similarity with Autodesk Inventor, which is a tool I already know; and free license. </h3>
-
-               <h3>Fusion have powerful features for hobbist and startups, so I think it will serve by far the needs. </h3>
+            <h2>Objective</h2>
+            <h3>For this week I want to 3D Print a card holder for my TCG cards. I will be using Autodesk Fusion 360 and Afiinity Designer (vector designer)
+                for designing and a Zortrax 3D Printer.</h3>
+            <h3></h3>
+            <h2>Fusion 360</h2>
+            <h3>It is a web based tool for 3D design. It is a new CAD software wich integrates various tools (3D, Render, Drawing, etc) in a simple program to
+                make simple designs.</h3>
+            <h3></h3>
+            <h2>Affinity Designer</h2>
+            <h3>It is a vector designer tool for 2D design. It is common form images that will be applied onto physical products (CAD, 3D graphics, etc).</h3>
+            <h3></h3>
             </td>
-        <td><img src="Imagenes\week3\w3_fusionimage.jpg" width="480px" height="270px">
+        <td><img src="Imagenes\week3\w3_deckvault_open.png" width="480px" height="525px">
         </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/t6wN9fWA0Rw" frameborder="0" allowfullscreen></iframe>
+          <img src="Imagenes\week3\w3_components.png" width="222px" height="289px">
+          <h3></h3>
+          <img src="Imagenes\week3\w3_height_extrude.png" width="266px" height="394px">
+          <h3></h3>
+          <img src="Imagenes\week3\w3_upper_hgt_extrude.png" width="264px" height="210px">
+          <h3></h3>
+          <img src="Imagenes\week3\w3_close.png" width="287px" height="175px">
         <td>
           <h2>3D Design</h2>
-          <h3>The good thing about Fusion it have lot of material to learn with built-in or in Youtube. You can learn from their own channel in this <a href="https://www.youtube.com/channel/UCiMwMz3RMbW5mbx0iDcRQ2g">link</a></h3>
-          <h3>When learning to design with 3D is good to start with this topics: Navigation tools (how to move the piece and the enviroment to better design), Sketching(The 2D draws that will turn into 3D), 3D Operations(Extrude, Roll, chanfer, etc)
-          and finally Assembly(How to connect different pieces or different assemblies to create and operating mechanism). In my case I will review each one with Fusion</h3>
-          <h3>In my experience, the first thing to define is: "Which going to be my final assembly?" and "how many sub-assemblies it going to have?". Having that in mind, I will start doing two pieces: the hand and the "fingers".
-            On the left is the video with the hand and finger design I made to test the software.</h3>
-            <h3></h3>
+          <h3>My "Deck Vault" will have 3 components: the body (largest part), top vault and top. The body will held my deck and the top vault will be used
+              to put dices or any other game utility. Using Fusion I create 3 componentes, turning my part file into an assembly.</h3>
+          <h3>First I will design the body. Similar to Inventor, Fusion 360 starts with a sketch <img src="Imagenes\week3\w3_sketch_button.png" width="36px" height="40px">.
+              Using the rectangular tool <img src="Imagenes\week3\w3_rect_button.png" width="35px" height="26px"> on Fusion I drew a "center rectangle", a rectangle with 2 points:
+              the center and the diagonal. Dimensions for this part will be: 70 mm wide, 55 mm large and 1.5 mm width for wall (3d printer minimal requirement).
+              Extrusion will give the design 115 mm height. With base part completed, sharp edges will be smoothed with a 1.5 mm fillet on inner and outter edges.</h3>
+              <img src="Imagenes\week3\w3_body_sketch.png" width="261px" height="208px">
+          <h3>Second piece is the top compartment (upper). Same procedure as body: Rectangle tool on sketch (dimension will be 54.5x69.5mm and 1.5 width wall)
+              and extrusion for basic form (21mm height and additional 1.5 mm for base). Same fillet radius for sharp edges.</h3>
+              <img src="Imagenes\week3\w3_upper_sketch.png" width="262px" height="220px">
+          <h3>The "crown" feature (serving as hard stop and avoiding the upper component to fall), is added on the top face of the component. This part will have a gap for top insertion.
+            To avoid problems with haging parts, I will be using a triangular shape which is deducted from the front face (using extrude operation as cut).</h3>
+            <img src="Imagenes\week3\w3_upper_slide.png" width="177px" height="232px">
+          <h3>Finally the top will be rectangular with a triangular feature for easy open. Picture on left shows how looks.</h3>
+          <h3></h3>
 
-            <h2>3D Design Process</h2>
-            <h3>Similar to Inventor, first we need to do a sketch. One thing different from Inventor is you probably will be working on the same file. You will be creating components directly
-            to the assembly. So I create the the sketch for the hand and and extrude it.</h3>
-            <h3>Once I have my first solid, need to add details. Used the chamfer command to reduce pointy edges and another sketch to create the finger slot. Also draw a point for later finger join.</h3>
-            <h3>Finally, creating the finger (with similar process as before), used the Joint command to attach it to the hand. Video will show the steps made.</h3>
         </td>
       </tr>
       <!--Fila3-->
       <tr>
         <td>
+          <h2>2D Design</h2>
+          <h3>Using Affinity Designer - a vector desginer - I will add a logo to the deck vault. Fusion uses SVG *Scalable Vector Graphics) format,
+              so I will need to export my file into that format.</h3>
+          <h3>Using an image as a base, I use the pen tool <img src="Imagenes\week3\w3_pen_tool.png" width="27px" height="23px"> to create the vector image.
+              The pen tool allows to draw a line and then modify it freely. With that, I can draw the contour for extrusion on Fusion. Once the contour is finished,
+              Affinity allows to export to SVG directly. Once exported, I return to Fusion o insert it on my 3D.</h3>
+              <img src="Imagenes\week3\w3_pen_mod.png" width="135px" height="247px">
+          <h3>Once again in Fusion, I create a sketch, add the image, rescale it. Thanks to the SVG format, the file will scale nicely without losing resolution.
+              Once the image is well placed, the extrusion is made. To make the extrusion better fit for 3D Print, an small fillet (0.8mm) is used.</h3>
+              <img src="Imagenes\week3\w3_mtg_insert.png" width="218px" height="342px">
+          <h3> Now the the solid is ready for 3D print on next assingment.</h3>
         </td>
         <td>
-          <h2>Files</h2>
-            <h3>Files from this assignment are <a href="Files\week3\week3.rar" download>here</a>.</h3>
+          <img src="Imagenes\week3\w3_mtg_logo.png" width="119px" height="213px">
+          <h3></h3>
+          <img src="Imagenes\week3\w3_mtg_export.png" width="395px" height="181px">
+          <h3></h3>
+          <img src="Imagenes\week3\w3_mtg_final.png" width="233px" height="363px">
+        </td>
+      </tr>
+      <!--Fila4-->
+      <tr>
+        <td>
+        </td>
+        <td>
+          <h2>Download</h2>
+            <h3>Files from this assignment are available online <a href="https://a360.co/2PI6d6z">here</a>.</h3>
         </td>
       </tr>
     </table>

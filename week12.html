@@ -45,8 +45,7 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Measure the power consumption of an output device.</li>
-            <li>Personal - Add an output device to a microcontroller board you've designed and program it to do something.</li>
+            <li>Add an output device to a microcontroller board you've designed and program it to do something.</li>
           </ul>
         </td>
         </tr>
@@ -98,77 +97,89 @@
   <!--Main-->
   <div class="container-main">
     <table>
-      <!--Fila1-->
-      <tr>
-        <td>
-          </td>
-          <td>
-            <h2>Planning circuit</h2>
-              <h3>For this assignment I will use <a href="week11.html">week 10</a> board as a base. Will replace both LEDs and button with a RGB light. Will keep FTDI and 2x2 header for networking assignment.</h3>
-              </td>
-      </tr>
       <!--Fila2-->
       <tr>
         <td>
+          <h2>Planning circuit</h2>
+            <h3>For this assignment I will use <a href="week11.html">week 10</a> board as a base. Will replace both LEDs and button with a RGB light.
+                Will keep FTDI and 2x2 header for networking assignment.</h3>
+            <h3></h3>
           <h2>Simulation</h2>
-            <h3>Using <a href="week11.html">week 10</a> simulation as base, I replace both LEDs and button with a RGB light</h3>
+            <h3>Using <a href="week11.html">week 11</a> simulation as base, I replace both LEDs and button with a RGB light</h3>
             <h3>The bill of materials used here is: (without FTDI and 2x2 headers)</h3>
             <h3>
               <ul>
-              <li>Attiny45 x1</li>
-              <li>Red LED x1<li>
-              <li>1uF Capacitor x1<li>
-              <li>10k Ohm Resistor x1</li>
-              <li>1k Ohm Resistor x2</li>
-              <li>499 Ohm Resistor x1</li>
+                <li>Attiny45 x1</li>
+                <li>Red LED x1<li>
+                <li>1uF Capacitor x1<li>
+                <li>10k Ohm Resistor x1</li>
+                <li>1k Ohm Resistor x2</li>
+                <li>499 Ohm Resistor x1</li>
               <ul>
             </h3>
-            <h3>With everything connected, I load a code found at <a href="">here</a> and its a success!.</h3>
+            <h3></h3>
+          <h2>Programming</h2>
+            <h3>After connect everything, we add the code for this proyect. It is important to note that since we are working with an RGB, we need to use
+                the "PMW" pins to regulate color. If we only use digital output, we could only get solid colors and mixes between them. However, pinout from tiny45
+                indicates we only have 2 pins for PWM work (pin 0 and 1), meaning green (pin 2) can only be used as solid color.</h3>
+            <h3></h3>
+            <img src="Imagenes\week12\w12_sim_code.png" width="274px" height="413px">
+            <h3></h3>
+            <h3>First part of the code is to set the pins I'm using to connect RGB LEDs. On setup function, pin are set as an output.</h3>
+            <h3>Now we jump to "colordef" function. There color parameters are created (red , green and blue) and set to be the parameter for the "analogWrite" function.</h3>
+            <h3>In loop, colors decided to light are defined. And that's it.</h3>
             <h3>Can find the simulation <a href="https://www.tinkercad.com/things/kt2DZlqMVVe">here</a><h3>
             </td>
         <td>
           <img src="Imagenes\week12\w12_simulation.png" width="556px" height="273px">
+          <h3></h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/blEnSkB_-tY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h3></h3>
           </td>
       </tr>
       <!--Fila3-->
       <tr>
       <td>
-          <img src="Imagenes\week12\w12_schematics.png" width="608px" height="284px"><img src="Imagenes\week12\w12_board_result.png" width="582px" height="375px">
-        </td>
+          <img src="Imagenes\week12\w12_schematics.png" width="608px" height="284px">
+          <h3></h3>
+          <img src="Imagenes\week12\w12_board_result.png" width="582px" height="375px">
+          <h3></h3>
+          <img src="Imagenes\week12\w12_mill_final.png" width="378px" height="271px">
+          <h3></h3>
+          <img src="Imagenes\week12\w12_solder_final.png" width="398px" height="273px">
+          <h3></h3>
+      </td>
       <td>
         <h2>Design</h2>
-          <h3>Using <a href="week10.html">week 10</a> schematics as base, I replaced the LEDs and their resistors, the button and it's pullup resistor; with a RBG LED and 3 resistor on each leg.</h3>
-          <h3>Repeat same steps as <a href="week10.html">week 10</a>.</h3>
-      </td>
-      </tr>
-      <!--Fila4-->
-      <tr>
-        <td>
-          <h2>Milling and soldering</h2>
-            <h3>Repeating steps from <a href="week10.html">week 10</a>.</h3>
-            <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.
+          <h3>Using <a href="week11.html">week 11</a> schematics as base, I replaced the LEDs and their resistors, the button and it's pullup resistor;
+            with a RBG LED and 3 resistor on each leg. Similar to that week, 2x2 headers are used to later comm work.</h3>
+          <h3>Repeat same steps as <a href="week11.html">week 11</a>.</h3>
+          <h3></h3>
+        <h2>Milling and soldering</h2>
+          <h3>Same procedure like last week.</h3>
+          <h3>After milling noticed some tracks were connected! Used a cutter and then cleaned with a toothbrush.
               Also, due to the use of a broken 1/64 tool, the board had some debri on it. Had to remove with a lime. </h3>
-            <h3>Soldered, loaded a code I grab from <a href="https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/arduino-sketch">here.</a> (little tweek selecting the correct pin number) and tried continuity. Everything was ok</h3>
-        </td>
-        <td>
-          <img src="Imagenes\week12\w12_milling_result.jpg" width="438px" height="339px"><img src="Imagenes\week12\w12_solder_result.jpg" width="574px" height="354px">
-        </td>
-      </tr>
-      <!--Fila5-->
-      <tr>
-        <td>
+          <h3>Soldered, and continuity test. Everything was ok.</h3>
+          <h3></h3>
+        <h2>Programming</h2>
+          <h3>I only need to load the simulation programm to the tiny. But need to change the pin number to match the ones on the board.</h3>
+          <h3>"redPin", "bluePin" and "greenPin" are changed to 0, 4 and 3.</h3>
+          <h3></h3>
+          <img src="Imagenes\week12\w12_code_final.png" width="306px" height="478px">
+          <h3></h3>
+          <h3>Soldered, and continuity test. Everything was ok.</h3>
+          <h3></h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/L3AO-oRKkzk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </td>
-        <td>
-          <h2>Testing</h2>
-            <h3>This is the video of how it is working.</h3>
-        </td>
+          <h3></h3>
+      </td>
       </tr>
       <!--Fila6-->
       <tr>
         <td>
           <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+            <h3>Simulation can be found <a href="https://www.tinkercad.com/things/kt2DZlqMVVe">here</a>.</h3>
+            <h3>Eagle design can be found <a href="Files\week12\week12.rar">here</a>.</h3>
+            <h3>Code files can be found <a href="code\week12\week12.rar">here</a>.</h3>
         </td>
         <td>
 
