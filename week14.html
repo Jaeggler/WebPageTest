@@ -45,8 +45,7 @@
         <tr>
           <td>
           <ul>
-            <li>Group - group project.</li>
-            <li>Personal - Design and build a wired &/or wireless network connecting at least two processors</li>
+            <li>Design and build a wired &/or wireless network connecting at least two processors</li>
           </ul>
         </td>
         </tr>
@@ -97,38 +96,63 @@
   <!--Main-->
   <div class="container-main">
     <table>
+
       <!--Fila1-->
       <tr>
         <td>
-          </td>
-        <td>
           <h2>Design Network</h2>
-            <h3>I will use a Arduino One board to send serial data to an output board. </h3>
-
+            <h3>I will be using 2 boards from previous weeks to send data and turn a led in the other one. Board from week 11 (Input) will send either 1 or 0 and the other
+                board will turned on/off depending of the value.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+          <h2>Coding</h2>
+            <h3>First I will code the OUTPUT. Attiny45 do not have hardware serial comm, instead software based will be used. SoftwareSerial library allows tiny and arduino boards
+                to create extra serial pins so, we are adding to the code.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_out_p1.png" width="202px" height="158px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>Defining some variables and creating the SoftwareSerial object which will be called "softserial". This object need the values for virtual Rx and Tx.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_out_p2.png" width="289px" height="160px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>In "setup" function, "softserial" starts with the begin method and some ports are defined as input/output.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_out_p3.png" width="266px" height="132px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>Finally the "loop" code is added. Here a LED is turned on/off for debugging purpose and 0 and 1 bytes are sent through Tx pin.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_out_p4.png" width="260px" height="163px">
+            <h3> <!--Blanck space for separation--></h3>
+        </td>
+        <td>
+          <img src="Imagenes\week14\w14_code_out.png" width="292px" height="513px">
         </td>
 
       </tr>
       <!--Fila2-->
       <tr>
+        <td><img src="Imagenes\week14\w14_code_in.png" width="416px" height="498px"></td>
         <td>
-            <h2>Simulation</h2>
-              <h3>First I will simulate a serial comm network. Using two Arduino Boards, I will send data (1 and 2), and the other board will light one LED each time.</h3>
-              <h3>I'm using Rx and Tx pin (RS232) for this test.</h3>
-              <h3>The program used for this test is at the bottom of the page.</h3>
+          <h2>Coding the input</h2>
+            <h3>Including librar, variables and opening the serial comm it's similar.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_in_p1.png" width="418px" height="279px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>In "loop" thing changes because now it is reading data.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week14\w14_code_in_p2.png" width="252px" height="195px">
+            <h3> <!--Blanck space for separation--></h3>
         </td>
-        <td>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/85LoTZfYEeg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </td>
 
       </tr>
       <!--Fila3-->
       <tr>
-        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/epYSOkysRbQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></td>
         <td>
-          <h2>With self board</h2>
-            <h3>Using Neil RS232 programming, I set the Arduino One to send pulse equal to the output board Node code (Check code at the files). When reciving data, the LED on the output board blinks
-            slowly. When no data is coming blinks faster. </h3>
-            <h3>All programming its done with a Arduino ONE as an ISP.</h3>
+          <h2>Testing</h2>
+            <h3>Using an arduino board for power feeding, I connect it to the output board and from it, serial connect the other board. Video show data send from one and the other recieving.</h3>
+
+        </td>
+        <td>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3WBjUYxYKJg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </td>
 
       </tr>
@@ -136,7 +160,7 @@
       <tr>
         <td>
           <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+            <h3>Coding files can be found at <a href="code\week14\week14.rar">here</a>.</h3>
         </td>
         <td>
         </td>
