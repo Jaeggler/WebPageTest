@@ -45,9 +45,8 @@
         <tr>
           <td>
           <ul>
-            <li>Group - Compare the performance and development workflows for other architectures.</li>
-            <li>Personal - Read a microcontroller data sheet. </li>
-            <li>Personal - Program your board to do something, with as many different programming languages and programming environments as possible.</li>
+            <li>Read a microcontroller data sheet. </li>
+            <li>Program your board to do something, with as many different programming languages and programming environments as possible.</li>
           </ul>
         </td>
         </tr>
@@ -102,60 +101,76 @@
       <!--Fila1-->
       <tr>
         <td>
-          <img src="Imagenes\week8\w8_tiny45_pinout.png" width="458px" height="164px">
-          </td>
+          <img src="Imagenes\week9\w9_tiny45_pinout.png" width="458px" height="164px">
+        </td>
         <td>
           <h2>Micro Datasheet</h2>
-            <h3>In this assigment I will ve using the Electronics Design week board I did. This is an attiny45 micro from AVR. I found the micro datasheet at this
+            <h3>In this assigment I will be using the Electronics Design week board I did. This is an attiny45 micro from AVR. I found the micro datasheet at this
                <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet-Summary.pdf">link</a>.</h3>
-            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet" <a href="https://www.sparkfun.com/tutorials/223">(link here)</a>, which summaries the most important
-            stuff when not having experience with electronics.</h3>
+            <h3>Reading a micro might be a long and messy task. I used Sparkfun Electronics guide "How to read a Datasheet"
+               <a href="https://www.sparkfun.com/tutorials/223">(link here)</a>, which summaries the most important stuff when not having experience with electronics.</h3>
             <h3>According to the guide, I will be looking for: summary, specifications, pinout, absolute ratings, recommended operation conditions and example schematics. </h3>
-            <h3>Attiny 45 it's a 8 pin microcontroller. Taking VCC and GROUND pins, the micro have 6 I/O pins from which usually you dont use the RESET one. The micro have 4K storage, meaning it have
-            really short space. The lighter the code, the better.</h3>
+            <h3>Attiny 45 it's a 8 pin microcontroller. Taking out VCC and GROUND pins, the micro have 6 I/O pins from which RESET is usually left alone. Works with 2.7 to 5.5 Volts.</h3>
+            <h3>It does not have hardware serial comm, which might be solved with a software based one. Could be hard coded directly or "SoftwareSerial" library could be used.</h3>
+            <h3>The micro have 4K storage, meaning it have really short space. The lighter the code, the better.</h3>
         </td>
       </tr>
       <!--Fila2-->
       <tr>
         <td>
-          <h2>Programming</h2>
-            <h3>I will program an Arduino Board with Arduino, Python and Processing languaje to blink the built in LED on Pin 13. Arduinos are very </h3>
+          <h2>Language</h2>
+            <h3>I will be coding to the Week7 board with Arduino languaje and C to blink the LED on Pin 2. To program the micro, an arduino as ISP will be used.</h3>
             <h3></h3>
           <h2>Arduino</h2>
-            <h3>Arduino board carry a built-in LED (attached to PIN13) for testing purpose. So for this test, we want to tell the board to open the PIN 13
-              and turn it on (Or set HIGH in this example).</h3>
-            <h3>First we need to download Arduino. <a href="https://www.arduino.cc/en/Main/Software">Here</a> is the link to Arduino webpage where the IDE can be downloaded and other resources
-             can be found like tutorials, function references and community threads. Once it's downloaded, we proceed to installation (like anyother windows program) and finally open it.</h3>
-             <h3>The Arduino IDE its very simple. First we need to connect the Arduino to the computer through an USB socket and the "ON" LED will light. On the Arduino IDE we will select
-             the board we just plug in, by clicking on "Tools" menu and selecting the correct board we are using (Normally the IDE recongnize the board when connected).</h3>
-             <h3>Now </h3>
+            <h3>Using the Arduino IDE, we load the blink example. From "File" menu >> Examples >> Basics >> Blink. This code needs to be prepared to match the board pinout.</h3>
+            <h3>Week 7 board have it's LED on Pin2, so I need to change the code from LED_BUILTIN to pin 2. I created a variable to storage the pin number and labeled "ledpin".
+                The last part of the code is the standard blink part which turns light on/off with digitalWrite() function.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_ard_code_p1.png" width="294px" height="157px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>Now I load it to the board and see the code takes 942 bytes of memory from the 4096 bytes available (22%).</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_arduino_blink_usage.png" width="229px" height="71px">
+            <h3> <!--Blanck space for separation--></h3>
         </td>
         <td>
-          <img src="Imagenes\week9\w9_arduino_ide.jpg" width="720px" height="405px">
+          <img src="Imagenes\week9\w9_ard_final.png" width="399px" height="728px">
         </td>
-
       </tr>
       <!--Fila3-->
       <tr>
         <td>
-            <img src="Imagenes\week9\w9_arduino_blink_usage.png" width="230px" height="71px">
+          <img src="Imagenes\week9\w9_c_final.png" width="399px" height="727px">
         </td>
         <td>
-          <h2>Arduino languaje</h2>
-            <h3>Using Arduino IDE I programmed the blink code (files bottom of page). When loaded to the W6 board I can see it uses 22% of the storage. Datasheet details the program memory size is 4KB.</h3>
-            <h3></h3>
-            <h2>C Languaje</h2>
-              <h3>Using Arduino IDE I programmed the blink code with C code (files bottom of page). When loaded to the W6 board I can see it uses only 2% of the storage. Meaning everytime I program something
-            , I'm adding all library to the memory. Bad side of this, its C code it's really unfrindly making it better to situation where you need to improve your storage. For quick works, using Arduino would be better.
-            </td>
+          <h2>C Language</h2>
+            <h3>Arduino language is just a variation of C++. Programming with C directly is similar but looks weird for someone who does not know about registers.</h3>
+            <h3>Using Arduino IDE, the first part of the code is to set CPU speed. Attiny45 runs usually at 8MHz, so speed is defined as a whole number. Also it is important to
+                include avr library since we are working with an attiny which is an avr based microcontroller.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_c_code_p1.png" width="176px" height="110px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>The main function (void function which loops infinitely) contains the code to set all PORTB pins. PORTB stands as a "group" name for those pins. Attiny45 "PB" pins
+                are physical pin 1 (PB5), 2 (PB3), 3 (PB4), 5 (PB0), 6 (PB1) and 7 (PB2). Physical pins 4 and 8 are for GROUND and VCC.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_tiny45_pinout_color.jpg" width="492px" height="114px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>A "For" function with no condition runs the snippet with toggle function for light on/off the LED while delaying 1 second between actions.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_c_code_p2.png" width="263px" height="224px">
+            <h3> <!--Blanck space for separation--></h3>
+            <h3>Finally when loading the code, an amazing low memory usage shows why using c is efficient.</h3>
+            <h3> <!--Blanck space for separation--></h3>
+            <img src="Imagenes\week9\w9_c_code_space.png" width="794px" height="33px">
+            <h3> <!--Blanck space for separation--></h3>
+          </td>
       </tr>
-
 
       <!--Fila4-->
       <tr>
         <td>
           <h2>Files</h2>
-            <h3>All files can be found at <a href="https://drive.google.com/drive/folders/1tvxnIPoqjAbmi5EGJUxG0VASLhtlS3xV?usp=sharing">here</a>.</h3>
+            <h3>Code files can be found at <a href="Y:\FabAcademy2017\WebPageTest\code\week9\week9.rar">here</a>.</h3>
         </td>
         <td>
         </td>
